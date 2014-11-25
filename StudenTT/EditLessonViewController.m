@@ -23,9 +23,9 @@ static NSString * const kAddSubjectCellReuseID	= @"AddSubjectCell";
 
 
 @interface EditLessonViewController() <UITableViewDataSource, UITableViewDelegate>
-@property(nonatomic, strong) IBOutlet UITableView *subjectTableView;
-@property(nonatomic, strong) IBOutlet UIDatePicker *startTimePicker;
-@property(nonatomic, strong) IBOutlet UIDatePicker *endTimePicker;
+@property(nonatomic, weak) IBOutlet UITableView *subjectTableView;
+@property(nonatomic, weak) IBOutlet UIDatePicker *startTimePicker;
+@property(nonatomic, weak) IBOutlet UIDatePicker *endTimePicker;
 
 @property(nonatomic, strong) LessonRecord *tmpLessonRecord;
 @property(nonatomic, strong) RLMResults *subjectResults;

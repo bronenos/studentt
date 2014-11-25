@@ -14,9 +14,9 @@
 
 
 @interface EditSubjectViewController()
-@property(nonatomic, strong) IBOutlet UITextField *titleField;
-@property(nonatomic, strong) IBOutlet UITextField *locationField;
-@property(nonatomic, strong) IBOutlet UITextField *teacherField;
+@property(nonatomic, weak) IBOutlet UITextField *titleField;
+@property(nonatomic, weak) IBOutlet UITextField *locationField;
+@property(nonatomic, weak) IBOutlet UITextField *teacherField;
 
 - (NSString *)preparedString:(NSString *)string;
 - (BOOL)isStandaloneViewController;
