@@ -9,6 +9,7 @@
 #import "EditSubjectViewController.h"
 #import "SubjectRecord.h"
 #import "RLMRealm.h"
+#import "RealmHelper.h"
 
 
 
@@ -16,6 +17,9 @@
 @property(nonatomic, strong) IBOutlet UITextField *titleField;
 @property(nonatomic, strong) IBOutlet UITextField *locationField;
 @property(nonatomic, strong) IBOutlet UITextField *teacherField;
+
+- (NSString *)preparedString:(NSString *)string;
+- (BOOL)isStandaloneViewController;
 
 - (IBAction)doCancel;
 - (IBAction)doDone;
@@ -27,6 +31,10 @@
 - (void)viewDidLoad
 {
 	[super viewDidLoad];
+	
+	if ([self isStandaloneViewController] == NO) {
+		self.navigationItem.leftBarButtonItem = nil;
+	}
 	
 	self.tableView.rowHeight = 40;
 	self.titleField.text = self.subject.title;
@@ -43,23 +51,41 @@
 }
 
 
+#pragma mark - Internal
+- (NSString *)preparedString:(NSString *)string
+{
+	if (string == nil) {
+		return @"";
+	}
+	
+	NSCharacterSet *trimSet = [NSCharacterSet whitespaceCharacterSet];
+	return [string stringByTrimmingCharactersInSet:trimSet];
+}
+
+
+- (BOOL)isStandaloneViewController
+{
+	NSArray *viewControllers = self.navigationController.viewControllers;
+	return (self == [viewControllers firstObject]);
+}
+
+
 #pragma mark - User
 - (IBAction)doCancel
 {
-	[self.presentingViewController dismissViewControllerAnimated:YES
-													  completion:nil];
+	[self.navigationController popViewControllerAnimated:YES];
 }
 
 
 - (IBAction)doDone
 {
 	void (^populateLesson)() = ^{
-		self.subject.title = self.titleField.text ?: @"";
-		self.subject.location = self.locationField.text ?: @"";
-		self.subject.teacher = self.teacherField.text ?: @"";
+		self.subject.title = [self preparedString:self.titleField.text];
+		self.subject.location = [self preparedString:self.locationField.text];
+		self.subject.teacher = [self preparedString:self.teacherField.text];
 	};
 	
-	RLMRealm *realm = [RLMRealm defaultRealm];
+	RLMRealm *realm = [RealmHelper sharedRealm];
 	[realm transactionWithBlock:^{
 		if (self.subject == nil) {
 			self.subject = [SubjectRecord new];
@@ -71,7 +97,6 @@
 		}
 	}];
 	
-	[self.presentingViewController dismissViewControllerAnimated:YES
-													  completion:nil];
+	[self.navigationController popViewControllerAnimated:YES];
 }
 @end

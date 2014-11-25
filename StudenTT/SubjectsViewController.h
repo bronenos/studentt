@@ -9,5 +9,5 @@
 #import <UIKit/UIKit.h>
 
 
-@interface SubjectsViewController : UIViewController
+@interface SubjectsViewController : UITableViewController
 @end

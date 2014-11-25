@@ -4,9 +4,5 @@
 source 'https://github.com/CocoaPods/Specs.git'
 pod 'Realm'
 
-target 'StudenTT' do
-end
-
-target 'StudenTTTests' do
-end
-
+link_with 'StudenTT'
+link_with 'StudenTT WatchKit Extension'

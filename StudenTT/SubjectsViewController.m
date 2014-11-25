@@ -12,15 +12,14 @@
 #import "RLMResults.h"
 #import "SubjectRecord.h"
 #import "SubjectCell.h"
+#import "RealmHelper.h"
 
 
 static NSString * const kSubjectCellReuseID	= @"SubjectCell";
 static NSString * const kEditSubjectSegueID	= @"EditSubject";
 
 
-@interface SubjectsViewController() <UITableViewDataSource, UITableViewDelegate>
-@property(nonatomic, weak) IBOutlet UITableView *tableView;
-
+@interface SubjectsViewController()
 @property(nonatomic, strong) RLMResults *subjectResults;
 @property(nonatomic, strong) RLMNotificationToken *realmToken;
 
@@ -34,7 +33,9 @@ static NSString * const kEditSubjectSegueID	= @"EditSubject";
 - (instancetype)initWithCoder:(NSCoder *)aDecoder
 {
 	if ((self = [super initWithCoder:aDecoder])) {
-		self.subjectResults = [SubjectRecord allObjects];
+		RLMResults *subjectResults = [SubjectRecord allObjectsInRealm:[RealmHelper sharedRealm]];
+		self.subjectResults = [subjectResults sortedResultsUsingProperty:@"title" ascending:YES];
+		
 		[self registerRealm];
 	}
 	
@@ -48,21 +49,11 @@ static NSString * const kEditSubjectSegueID	= @"EditSubject";
 }
 
 
-#pragma mark - View
-- (void)viewDidLoad
-{
-	[super viewDidLoad];
-	
-	[self.tableView registerClass:[SubjectCell class]
-		   forCellReuseIdentifier:kSubjectCellReuseID];
-}
-
-
 #pragma mark - Internal
 - (void)registerRealm
 {
 	__weak __typeof(self) weakSelf = self;
-	self.realmToken = [[RLMRealm defaultRealm] addNotificationBlock:^(NSString *notification, RLMRealm *realm) {
+	self.realmToken = [[RealmHelper sharedRealm] addNotificationBlock:^(NSString *notification, RLMRealm *realm) {
 		[weakSelf.tableView reloadData];
 	}];
 }
@@ -70,7 +61,7 @@ static NSString * const kEditSubjectSegueID	= @"EditSubject";
 
 - (void)unregisterRealm
 {
-	[[RLMRealm defaultRealm] removeNotification:self.realmToken];
+	[[RealmHelper sharedRealm] removeNotification:self.realmToken];
 }
 
 
@@ -81,8 +72,7 @@ static NSString * const kEditSubjectSegueID	= @"EditSubject";
 		NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
 		[self.tableView deselectRowAtIndexPath:indexPath animated:YES];
 		
-		UINavigationController *nc = segue.destinationViewController;
-		EditSubjectViewController *vc = [nc.viewControllers firstObject];
+		EditSubjectViewController *vc = segue.destinationViewController;
 		
 		SubjectRecord *subjectRecord = self.subjectResults[indexPath.row];
 		vc.subject = subjectRecord;
@@ -121,7 +111,7 @@ static NSString * const kEditSubjectSegueID	= @"EditSubject";
 
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
 {
-	RLMRealm *realm = [RLMRealm defaultRealm];
+	RLMRealm *realm = [RealmHelper sharedRealm];
 	[realm transactionWithBlock:^{
 		[realm deleteObject:self.subjectResults[indexPath.row]];
 	}];

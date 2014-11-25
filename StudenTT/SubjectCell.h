@@ -13,5 +13,6 @@
 
 
 @interface SubjectCell : UITableViewCell
-- (void)configureWithSubject:(SubjectRecord *)subject;
+- (void)configureWithSubject:(SubjectRecord *)subjectRecord;
+- (void)configureWithSubject:(SubjectRecord *)subjectRecord isActive:(BOOL)active;
 @end

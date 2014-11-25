@@ -13,6 +13,7 @@
 #import "DayRecord.h"
 #import "LessonCell.h"
 #import "NSDate+Utils.h"
+#import "RealmHelper.h"
 
 
 static NSString * const kAddLessonCellReuseID	= @"AddLessonCell";
@@ -69,7 +70,7 @@ static NSString * const kEditLessonSegueID		= @"EditLesson";
 - (void)registerRealm
 {
 	__weak __typeof(self) weakSelf = self;
-	self.realmToken = [[RLMRealm defaultRealm] addNotificationBlock:^(NSString *notification, RLMRealm *realm) {
+	self.realmToken = [[RealmHelper sharedRealm] addNotificationBlock:^(NSString *notification, RLMRealm *realm) {
 		[weakSelf.tableView reloadData];
 	}];
 }
@@ -77,15 +78,15 @@ static NSString * const kEditLessonSegueID		= @"EditLesson";
 
 - (void)unregisterRealm
 {
-	[[RLMRealm defaultRealm] removeNotification:self.realmToken];
+	[[RealmHelper sharedRealm] removeNotification:self.realmToken];
 }
 
 
 - (void)generateDays
 {
-	RLMRealm *realm = [RLMRealm defaultRealm];
+	RLMRealm *realm = [RealmHelper sharedRealm];
 	[realm transactionWithBlock:^{
-		const NSInteger cnt = [NSDate dateFormatter].weekdaySymbols.count;
+		const NSInteger cnt = [NSDate sharedFormatter].weekdaySymbols.count;
 		for (NSUInteger i=0; i<cnt; i++) {
 			DayRecord *dayRecord;
 			
@@ -106,7 +107,10 @@ static NSString * const kEditLessonSegueID		= @"EditLesson";
 - (void)populateTable
 {
 	const NSInteger oddFilter = self.weekTypeControl.selectedSegmentIndex;
-	self.timetableResults = [DayRecord objectsWhere:@"oddWeek == %@", @(oddFilter)];
+	
+	RLMResults *timetableResults = [DayRecord objectsInRealm:[RealmHelper sharedRealm]
+													   where:@"oddWeek == %@", @(oddFilter)];
+	self.timetableResults = [timetableResults sortedResultsUsingProperty:@"weekday" ascending:YES];
 	
 	if (self.timetableResults.count == 0) {
 		[self generateDays];
@@ -123,8 +127,7 @@ static NSString * const kEditLessonSegueID		= @"EditLesson";
 		NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
 		[self.tableView deselectRowAtIndexPath:indexPath animated:YES];
 		
-		UINavigationController *nc = segue.destinationViewController;
-		EditLessonViewController *vc = [nc.viewControllers firstObject];
+		EditLessonViewController *vc = segue.destinationViewController;
 		
 		DayRecord *dayRecord = self.timetableResults[indexPath.section];
 		vc.dayRecord = dayRecord;
@@ -140,13 +143,13 @@ static NSString * const kEditLessonSegueID		= @"EditLesson";
 #pragma mark - UITableViewDataSource
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-	return [NSDate dateFormatter].standaloneWeekdaySymbols.count;
+	return [NSDate sharedFormatter].standaloneWeekdaySymbols.count;
 }
 
 
 - (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
 {
-	return [NSDate dateFormatter].standaloneWeekdaySymbols[section];
+	return [NSDate sharedFormatter].standaloneWeekdaySymbols[section];
 }
 
 
@@ -189,7 +192,7 @@ static NSString * const kEditLessonSegueID		= @"EditLesson";
 #pragma mark - UITableViewDelegate
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
 {
-	RLMRealm *realm = [RLMRealm defaultRealm];
+	RLMRealm *realm = [RealmHelper sharedRealm];
 	[realm transactionWithBlock:^{
 		DayRecord *dayRecord = self.timetableResults[indexPath.section];
 		LessonRecord *lessonRecord = dayRecord.lessons[indexPath.row];

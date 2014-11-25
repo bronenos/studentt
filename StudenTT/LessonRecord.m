@@ -10,4 +10,12 @@
 
 
 @implementation LessonRecord
+- (instancetype)copy
+{
+	LessonRecord *copy = [[self class] new];
+	copy.startTime = self.startTime;
+	copy.endTime = self.endTime;
+	copy.subject = self.subject;
+	return copy;
+}
 @end

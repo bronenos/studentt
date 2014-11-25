@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="6221" systemVersion="14C68k" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="AgC-eL-Hgc">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6213"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="3734"/>
+    </dependencies>
+    <scenes>
+        <!--StudenTT-->
+        <scene sceneID="aou-V4-d1y">
+            <objects>
+                <controller title="StudenTT" id="AgC-eL-Hgc" customClass="InterfaceController">
+                    <items>
+                        <timer width="1" alignment="left" textAlignment="center" format="abbreviated" previewedSeconds="80000" id="Q4B-m5-wcB">
+                            <calendarUnit key="units" hour="YES" minute="YES"/>
+                        </timer>
+                    </items>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="164" y="217"/>
+        </scene>
+        <!--Glance Interface Controller-->
+        <scene sceneID="rjY-Ar-IMT">
+            <objects>
+                <glanceController spacing="0.0" id="Sv0-Ai-Zie" customClass="GlanceController">
+                    <items>
+                        <group alignment="left" spacing="3" id="gv7-I2-MZq" userLabel="Icon Group">
+                            <items>
+                                <imageView alignment="left" verticalAlignment="center" image="LittleWatchIcon.png" contentMode="scaleAspectFit" id="h82-An-hlk"/>
+                            </items>
+                        </group>
+                        <group alignment="left" layout="vertical" spacing="0.0" id="eew-Gs-W6Y" userLabel="Body Group">
+                            <items>
+                                <group width="1" alignment="left" layout="vertical" spacing="0.0" id="yrO-sw-OHm" userLabel="Now Group">
+                                    <items>
+                                        <label width="1" widthAdjustment="1" alignment="left" text="Now" textAlignment="left" id="uSU-mK-yxj">
+                                            <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                            <fontDescription key="font" style="UICTFontTextStyleHeadline"/>
+                                        </label>
+                                        <label width="1" alignment="left" text="History" textAlignment="left" numberOfLines="2" id="AWc-vE-TV5" userLabel="Lesson">
+                                            <fontDescription key="font" style="UICTFontTextStyleCaption2"/>
+                                        </label>
+                                        <group width="1" alignment="left" spacing="3" id="b1c-Hh-bjH" userLabel="Time Group">
+                                            <items>
+                                                <label alignment="left" text="ends in" textAlignment="left" id="bsW-6r-pet">
+                                                    <fontDescription key="font" style="UICTFontTextStyleCaption2"/>
+                                                </label>
+                                                <timer alignment="left" textAlignment="left" format="abbreviated" previewedSeconds="4000" id="coj-4Y-iyc">
+                                                    <fontDescription key="font" style="UICTFontTextStyleCaption2"/>
+                                                    <calendarUnit key="units" hour="YES" minute="YES"/>
+                                                </timer>
+                                            </items>
+                                        </group>
+                                    </items>
+                                </group>
+                                <label width="1" alignment="left" text=" " textAlignment="center" numberOfLines="0" id="kz3-be-wdg" userLabel="Separator">
+                                    <fontDescription key="font" name="HelveticaNeue" family="Helvetica Neue" pointSize="1"/>
+                                </label>
+                                <group width="1" alignment="left" layout="vertical" spacing="0.0" id="uqQ-UP-z1o" userLabel="Next Group">
+                                    <items>
+                                        <label width="1" alignment="left" text="Next" textAlignment="left" numberOfLines="2" id="X4x-lV-2S6">
+                                            <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                            <fontDescription key="font" style="UICTFontTextStyleHeadline"/>
+                                        </label>
+                                        <label width="1" alignment="left" text="Economics" textAlignment="left" numberOfLines="2" id="cmV-y3-6vK" userLabel="Lesson">
+                                            <fontDescription key="font" style="UICTFontTextStyleCaption2"/>
+                                        </label>
+                                        <group width="1" alignment="left" spacing="2" id="hyD-Eg-LP0" userLabel="Time Group">
+                                            <items>
+                                                <label alignment="left" text="13:00" textAlignment="left" id="d9Y-C5-VLt" userLabel="13:00">
+                                                    <fontDescription key="font" style="UICTFontTextStyleCaption2"/>
+                                                </label>
+                                                <label alignment="left" text="–" textAlignment="left" id="25K-mr-DvI">
+                                                    <fontDescription key="font" style="UICTFontTextStyleCaption2"/>
+                                                </label>
+                                                <label alignment="left" text="14:30" textAlignment="left" id="7Jk-iL-yKa" userLabel="14:30">
+                                                    <fontDescription key="font" style="UICTFontTextStyleCaption2"/>
+                                                </label>
+                                            </items>
+                                        </group>
+                                    </items>
+                                </group>
+                            </items>
+                        </group>
+                    </items>
+                    <edgeInsets key="margins" left="0.0" right="0.0" top="0.0" bottom="14"/>
+                    <connections>
+                        <outlet property="nextEndTimeLabel" destination="7Jk-iL-yKa" id="Okn-sd-2Ed"/>
+                        <outlet property="nextLabel" destination="X4x-lV-2S6" id="Bc5-hi-5xh"/>
+                        <outlet property="nextLessonLabel" destination="cmV-y3-6vK" id="DCv-rQ-jzE"/>
+                        <outlet property="nextStartTimeLabel" destination="d9Y-C5-VLt" id="lNL-g5-YRK"/>
+                        <outlet property="nextTimeGroup" destination="hyD-Eg-LP0" id="OES-Ov-xwk"/>
+                        <outlet property="nowLabel" destination="uSU-mK-yxj" id="7QU-Qj-djT"/>
+                        <outlet property="nowLessonLabel" destination="AWc-vE-TV5" id="XKq-9r-BF0"/>
+                        <outlet property="nowTimeInLabel" destination="bsW-6r-pet" id="yrD-eS-QHg"/>
+                        <outlet property="nowTimer" destination="coj-4Y-iyc" id="xdY-PD-x8f"/>
+                        <outlet property="separatorLabel" destination="kz3-be-wdg" id="zfX-Fo-fim"/>
+                    </connections>
+                </glanceController>
+            </objects>
+            <point key="canvasLocation" x="164" y="514"/>
+        </scene>
+    </scenes>
+</document>

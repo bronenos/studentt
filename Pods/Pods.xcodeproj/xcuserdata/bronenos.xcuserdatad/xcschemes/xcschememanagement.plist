@@ -9,26 +9,6 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>Pods-StudenTT-Realm.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
-		<key>Pods-StudenTT.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
-		<key>Pods-StudenTTTests-Realm.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
-		<key>Pods-StudenTTTests.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
 		<key>Pods.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -37,32 +17,12 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>2C8A37F21E79619A459F0BEF</key>
+		<key>3D05EC803CAA63F7A0BDA370</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>84A7D8CFF0BAE88344BCE2C0</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>9B9F2FA14B748A6B4137E92D</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>B18362F402C8F89B5713D9DD</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>DF9169102D129C3DF2D0B263</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>E9110D505765E0750147B2C0</key>
+		<key>692B68CC9CB9C80CFDABFB54</key>
 		<dict>
 			<key>primary</key>
 			<true/>

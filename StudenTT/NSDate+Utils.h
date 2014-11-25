@@ -9,10 +9,17 @@
 #import <UIKit/UIKit.h>
 
 
+@class LessonRecord;
+
+
 @interface NSDate (Utils)
-+ (NSDateFormatter *)dateFormatter;
-+ (NSCalendar *)calendar;
++ (NSDateFormatter *)sharedFormatter;
++ (NSCalendar *)sharedCalendar;
 
 - (NSString *)timeString;
-- (NSDate *)dateWithOnlyTime;
+- (NSDate *)dateWithOnlyTimeAndSeconds:(BOOL)seconds;
+- (NSDate *)dateWithTodayDate;
+
+- (BOOL)isBeforeLesson:(LessonRecord *)lessonRecord;
+- (BOOL)isDuringLesson:(LessonRecord *)lessonRecord;
 @end

@@ -12,9 +12,16 @@
 
 @implementation SubjectCell
 #pragma mark - Public
-- (void)configureWithSubject:(SubjectRecord *)subject
+- (void)configureWithSubject:(SubjectRecord *)subjectRecord
 {
-	self.textLabel.text = subject.title;
-	self.detailTextLabel.text = [NSString stringWithFormat:@"%@, %@", subject.location, subject.teacher];
+	self.textLabel.text = subjectRecord.title;
+	self.detailTextLabel.text = [NSString stringWithFormat:@"%@, %@", subjectRecord.location, subjectRecord.teacher];
+}
+
+
+- (void)configureWithSubject:(SubjectRecord *)subjectRecord isActive:(BOOL)active
+{
+	[self configureWithSubject:subjectRecord];
+	self.accessoryType = active ? UITableViewCellAccessoryCheckmark : UITableViewCellAccessoryNone;
 }
 @end

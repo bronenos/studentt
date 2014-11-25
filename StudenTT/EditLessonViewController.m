@@ -7,31 +7,30 @@
 //
 
 #import "EditLessonViewController.h"
+#import "EditSubjectViewController.h"
+#import "SubjectCell.h"
 #import "RLMRealm.h"
 #import "RLMResults.h"
 #import "DayRecord.h"
 #import "LessonRecord.h"
 #import "SubjectRecord.h"
 #import "NSDate+Utils.h"
+#import "RealmHelper.h"
 
 
-@interface EditLessonViewController() <UIPickerViewDataSource, UIPickerViewDelegate>
-@property(nonatomic, weak) IBOutlet UIButton *startTimeButton;
-@property(nonatomic, weak) IBOutlet UIButton *endTimeButton;
-@property(nonatomic, strong) IBOutlet UIPickerView *subjectPicker;
-@property(nonatomic, strong) IBOutlet UIDatePicker *timePicker;
-@property(nonatomic, strong) IBOutlet NSLayoutConstraint *subjectConstraint;
-@property(nonatomic, strong) IBOutlet NSLayoutConstraint *timeConstraint;
+static NSString * const kSubjectCellReuseID		= @"SubjectCell";
+static NSString * const kAddSubjectCellReuseID	= @"AddSubjectCell";
 
+
+@interface EditLessonViewController() <UITableViewDataSource, UITableViewDelegate>
+@property(nonatomic, strong) IBOutlet UITableView *subjectTableView;
+@property(nonatomic, strong) IBOutlet UIDatePicker *startTimePicker;
+@property(nonatomic, strong) IBOutlet UIDatePicker *endTimePicker;
+
+@property(nonatomic, strong) LessonRecord *tmpLessonRecord;
 @property(nonatomic, strong) RLMResults *subjectResults;
 @property(nonatomic, weak) UIButton *activeTimeButton;
 
-- (void)showSubjectPicker;
-- (void)showTimePicker;
-- (void)updateTimeButtons;
-
-- (IBAction)doOpenTimePicker:(UIButton *)sender;
-- (IBAction)doDoneTimePicker:(UIButton *)sender;
 - (IBAction)doCancel;
 - (IBAction)doDone;
 @end
@@ -42,7 +41,7 @@
 - (instancetype)initWithCoder:(NSCoder *)aDecoder
 {
 	if ((self = [super initWithCoder:aDecoder])) {
-		self.subjectResults = [SubjectRecord allObjects];
+		self.subjectResults = [SubjectRecord allObjectsInRealm:[RealmHelper sharedRealm]];
 	}
 	
 	return self;
@@ -54,117 +53,108 @@
 {
 	[super viewDidLoad];
 	
-	if (self.lessonRecord == nil) {
-		self.lessonRecord = [LessonRecord new];
+	if (self.lessonRecord) {
+		self.tmpLessonRecord = [self.lessonRecord copy];
 	}
 	else {
-		[self updateTimeButtons];
+		self.tmpLessonRecord = [LessonRecord new];
+		self.tmpLessonRecord.subject = [self.subjectResults firstObject];
+		self.tmpLessonRecord.startTime = [NSDate date];
+		self.tmpLessonRecord.endTime = [self.tmpLessonRecord.startTime dateByAddingTimeInterval:3600];
+	}
+	
+	self.startTimePicker.date = self.tmpLessonRecord.startTime;
+	self.endTimePicker.date = self.tmpLessonRecord.endTime;
+}
+
+
+- (void)viewWillAppear:(BOOL)animated
+{
+	[super viewWillAppear:animated];
+	[self.subjectTableView reloadData];
+}
+
+
+- (void)viewDidLayoutSubviews
+{
+	[super viewDidLayoutSubviews];
+	
+	self.startTimePicker.superview.frame = CGRectIntegral(self.startTimePicker.superview.frame);
+	self.endTimePicker.superview.frame = CGRectIntegral(self.endTimePicker.superview.frame);
+}
+
+
+#pragma mark - UITableViewDataSource
+- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
+{
+	return NSLocalizedString(@"Choose a subject", nil);
+}
+
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+	return self.subjectResults.count + 1;
+}
+
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+	if (indexPath.row < self.subjectResults.count) {
+		SubjectRecord *subjectRecord = self.subjectResults[indexPath.row];
+		const BOOL isActiveSubject = [self.tmpLessonRecord.subject isEqual:subjectRecord];
+		
+		SubjectCell *cell = (id) [tableView dequeueReusableCellWithIdentifier:kSubjectCellReuseID];
+		[cell configureWithSubject:subjectRecord isActive:isActiveSubject];
+		return cell;
+	}
+	else {
+		UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:kAddSubjectCellReuseID];
+		return cell;
 	}
 }
 
 
-#pragma mark - Internal
-- (void)showSubjectPicker
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-	self.subjectConstraint.priority = UILayoutPriorityDefaultHigh;
-	self.timeConstraint.priority = UILayoutPriorityDefaultLow;
-}
-
-
-- (void)showTimePicker
-{
-	self.subjectConstraint.priority = UILayoutPriorityDefaultLow;
-	self.timeConstraint.priority = UILayoutPriorityDefaultHigh;
-}
-
-
-- (void)updateTimeButtons
-{
-	NSString *startTimeString = [self.lessonRecord.startTime timeString] ?: @"0:00";
-	[self.startTimeButton setTitle:startTimeString forState:UIControlStateNormal];
-	
-	NSString *endTimeString = [self.lessonRecord.endTime timeString] ?: @"0:00";
-	[self.endTimeButton setTitle:endTimeString forState:UIControlStateNormal];
-}
-
-
-#pragma mark - UIPickerViewDataSource
-- (NSInteger)numberOfComponentsInPickerView:(UIPickerView *)pickerView
-{
-	return 1;
-}
-
-
-- (NSInteger)pickerView:(UIPickerView *)pickerView numberOfRowsInComponent:(NSInteger)component
-{
-	return self.subjectResults.count;
-}
-
-
-- (NSString *)pickerView:(UIPickerView *)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component
-{
-	SubjectRecord *subjectRecord = self.subjectResults[row];
-	return subjectRecord.title;
+	if (indexPath.row < self.subjectResults.count) {
+		SubjectRecord *subjectRecord = self.subjectResults[indexPath.row];
+		self.tmpLessonRecord.subject = subjectRecord;
+		
+		[self.subjectTableView reloadData];
+	}
+	else {
+		[self.subjectTableView deselectRowAtIndexPath:indexPath animated:YES];
+	}
 }
 
 
 #pragma mark - User
-- (IBAction)doOpenTimePicker:(UIButton *)sender
-{
-	NSDate *date = nil;
-	if (sender == self.startTimeButton) {
-		date = self.lessonRecord.startTime ?: [NSDate date];
-	}
-	else if (sender == self.endTimeButton) {
-		date = self.lessonRecord.endTime ?: [NSDate date];
-	}
-	
-	const BOOL animated = (self.timeConstraint.priority == UILayoutPriorityDefaultHigh);
-	[self.timePicker setDate:date animated:animated];
-	
-	self.activeTimeButton = sender;
-	[self showTimePicker];
-}
-
-
-- (IBAction)doDoneTimePicker:(UIButton *)sender
-{
-	NSDate *newTime = [self.timePicker.date dateWithOnlyTime];
-	
-	RLMRealm *realm = [RLMRealm defaultRealm];
-	[realm transactionWithBlock:^{
-		if (self.activeTimeButton == self.startTimeButton) {
-			self.lessonRecord.startTime = newTime;
-		}
-		else if (self.activeTimeButton == self.endTimeButton) {
-			self.lessonRecord.endTime = newTime;
-		}
-	}];
-	
-	[self updateTimeButtons];
-	[self showSubjectPicker];
-}
-
-
 - (IBAction)doCancel
 {
-	[self.presentingViewController dismissViewControllerAnimated:YES completion:nil];
+	[self.navigationController popViewControllerAnimated:YES];
 }
 
 
 - (IBAction)doDone
 {
-	RLMRealm *realm = [RLMRealm defaultRealm];
+	RLMRealm *realm = [RealmHelper sharedRealm];
 	[realm transactionWithBlock:^{
-		const NSInteger subjectIndex = [self.subjectPicker selectedRowInComponent:0];
-		self.lessonRecord.subject = self.subjectResults[subjectIndex];
-		
-		if (self.lessonRecord.realm == nil) {
-			[self.dayRecord.lessons addObject:self.lessonRecord];
-			[realm addObject:self.lessonRecord];
+		if (self.lessonRecord) {
+			[realm deleteObject:self.lessonRecord];
 		}
+		
+		self.tmpLessonRecord.startTime = [self.startTimePicker.date dateWithOnlyTimeAndSeconds:NO];
+		self.tmpLessonRecord.endTime = [self.endTimePicker.date dateWithOnlyTimeAndSeconds:NO];
+		[self.dayRecord.lessons addObject:self.tmpLessonRecord];
+		
+		NSArray *sortedLessons = [RealmHelper objects:self.dayRecord.lessons
+											 sortedBy:@"startTime"
+											ascending:YES];
+		
+		[self.dayRecord.lessons removeAllObjects];
+		[self.dayRecord.lessons addObjects:sortedLessons];
 	}];
 	
-	[self.presentingViewController dismissViewControllerAnimated:YES completion:nil];
+	[self.navigationController popViewControllerAnimated:YES];
 }
 @end
