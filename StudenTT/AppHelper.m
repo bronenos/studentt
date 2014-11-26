@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "RealmHelper.h"
+#import "AppHelper.h"
 #import "ConfigRecord.h"
 #import "DayRecord.h"
 #import "NSDate+Utils.h"
@@ -16,7 +16,7 @@
 static NSString * const kApplicationGroupID	= @"group.me.bronenos.studentt";
 
 
-@implementation RealmHelper
+@implementation AppHelper
 + (RLMRealm *)sharedRealm
 {
 	static NSString *realmPath = nil;
@@ -32,7 +32,7 @@ static NSString * const kApplicationGroupID	= @"group.me.bronenos.studentt";
 
 + (void)generateDefaults
 {
-	RLMRealm *realm = [RealmHelper sharedRealm];
+	RLMRealm *realm = [AppHelper sharedRealm];
 	
 	if ([ConfigRecord allObjectsInRealm:realm].count == 0) {
 		[realm transactionWithBlock:^{
@@ -85,5 +85,22 @@ static NSString * const kApplicationGroupID	= @"group.me.bronenos.studentt";
 	}
 	
 	return sortedObjects;
+}
+
+
++ (day_config_t)todayConfig
+{
+	RLMRealm *realm = [AppHelper sharedRealm];
+	ConfigRecord *configRecord = [[ConfigRecord allObjectsInRealm:realm] firstObject];
+	
+	NSCalendarUnit units = NSCalendarUnitWeekday | NSCalendarUnitWeekOfYear;
+	NSDateComponents *comps = [[NSDate sharedCalendar] components:units fromDate:[NSDate date]];
+	const BOOL oddWeek = comps.weekOfYear & 1;
+	const NSInteger weekday = comps.weekday;
+	
+	day_config_t dc;
+	dc.is_odd = oddWeek;
+	dc.weekday = weekday;
+	return dc;
 }
 @end

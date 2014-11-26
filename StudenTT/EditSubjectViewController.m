@@ -9,7 +9,7 @@
 #import "EditSubjectViewController.h"
 #import "SubjectRecord.h"
 #import "RLMRealm.h"
-#import "RealmHelper.h"
+#import "AppHelper.h"
 
 
 
@@ -85,7 +85,7 @@
 		self.subject.teacher = [self preparedString:self.teacherField.text];
 	};
 	
-	RLMRealm *realm = [RealmHelper sharedRealm];
+	RLMRealm *realm = [AppHelper sharedRealm];
 	[realm transactionWithBlock:^{
 		if (self.subject == nil) {
 			self.subject = [SubjectRecord new];

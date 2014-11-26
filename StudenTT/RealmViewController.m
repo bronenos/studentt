@@ -39,7 +39,7 @@
 - (void)registerRealm
 {
 	__weak __typeof(self) weakSelf = self;
-	self.realmToken = [[RealmHelper sharedRealm] addNotificationBlock:^(NSString *notification, RLMRealm *realm) {
+	self.realmToken = [[AppHelper sharedRealm] addNotificationBlock:^(NSString *notification, RLMRealm *realm) {
 		[weakSelf onRealmDidUpdate:notification];
 	}];
 }
@@ -47,7 +47,7 @@
 
 - (void)unregisterRealm
 {
-	[[RealmHelper sharedRealm] removeNotification:self.realmToken];
+	[[AppHelper sharedRealm] removeNotification:self.realmToken];
 }
 
 

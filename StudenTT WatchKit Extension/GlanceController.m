@@ -11,7 +11,7 @@
 #import "RLMResults.h"
 #import "DayRecord.h"
 #import "NSDate+Utils.h"
-#import "RealmHelper.h"
+#import "AppHelper.h"
 
 
 @interface GlanceController()
@@ -69,15 +69,10 @@
 #pragma mark - Internal
 - (DayRecord *)getDayRecord
 {
-	NSCalendar *cal = [NSDate sharedCalendar];
-	NSCalendarUnit units = NSCalendarUnitWeekday | NSCalendarUnitWeekOfYear;
-	NSDateComponents *comps = [cal components:units fromDate:[NSDate date]];
+	day_config_t dc = [AppHelper todayConfig];
 	
-	const NSInteger weekday = comps.weekday - 1;
-	const BOOL oddWeek = comps.weekOfYear & 1;
-	
-	RLMResults *dayResults = [DayRecord objectsInRealm:[RealmHelper sharedRealm]
-												 where:@"weekday == %d AND oddWeek == %d", weekday, oddWeek];
+	RLMResults *dayResults = [DayRecord objectsInRealm:[AppHelper sharedRealm]
+												 where:@"weekday == %d AND oddWeek == %d", dc.weekday, dc.is_odd];
 	return [dayResults firstObject];
 }
 

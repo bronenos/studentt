@@ -11,10 +11,18 @@
 #import "RLMResults.h"
 
 
-@interface RealmHelper : NSObject
+typedef struct {
+	bool is_odd;
+	int weekday;
+} day_config_t;
+
+
+@interface AppHelper : NSObject
 + (RLMRealm *)sharedRealm;
 + (void)generateDefaults;
 
 + (NSUInteger)indexOfObject:(id)object inResults:(RLMResults *)results;
 + (NSArray *)objects:(id)objects sortedBy:(NSString *)key ascending:(BOOL)asc;
+
++ (day_config_t)todayConfig;
 @end

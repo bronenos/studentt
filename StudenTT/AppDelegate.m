@@ -7,13 +7,13 @@
 //
 
 #import "AppDelegate.h"
-#import "RealmHelper.h"
+#import "AppHelper.h"
 
 
 @implementation AppDelegate
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-	[RealmHelper generateDefaults];
+	[AppHelper generateDefaults];
 	return YES;
 }
 @end

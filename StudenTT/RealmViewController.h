@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "RealmHelper.h"
+#import "AppHelper.h"
 
 
 @interface RealmViewController : UIViewController

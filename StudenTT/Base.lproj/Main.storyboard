@@ -31,11 +31,11 @@
                                     <segment title="Even"/>
                                 </segments>
                                 <connections>
-                                    <action selector="doSwitchWeeks" destination="BYZ-38-t0r" eventType="valueChanged" id="Nm6-nP-0OT"/>
+                                    <action selector="doSwitchWeeks:" destination="BYZ-38-t0r" eventType="valueChanged" id="uh0-s4-RJD"/>
                                 </connections>
                             </segmentedControl>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" translatesAutoresizingMaskIntoConstraints="NO" id="3Y8-RK-s5A">
-                                <rect key="frame" x="0.0" y="143" width="320" height="337"/>
+                                <rect key="frame" x="0.0" y="146" width="320" height="334"/>
                                 <color key="backgroundColor" red="0.93725490196078431" green="0.93725490196078431" blue="0.95686274509803926" alpha="1" colorSpace="calibratedRGB"/>
                                 <prototypes>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="LessonCell" textLabel="3HU-rR-KII" detailTextLabel="gFI-2V-r92" style="IBUITableViewCellStyleSubtitle" id="Bav-Mr-ZDw" customClass="LessonCell">
@@ -91,7 +91,7 @@
                         <constraints>
                             <constraint firstItem="Lf4-tj-Rra" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="40" id="7xi-Yo-Z5W"/>
                             <constraint firstAttribute="centerX" secondItem="cye-Cw-brG" secondAttribute="centerX" id="NT6-oi-gwZ"/>
-                            <constraint firstItem="3Y8-RK-s5A" firstAttribute="top" secondItem="Lf4-tj-Rra" secondAttribute="bottom" constant="11" id="PWr-fV-2h4"/>
+                            <constraint firstItem="3Y8-RK-s5A" firstAttribute="top" secondItem="Lf4-tj-Rra" secondAttribute="bottom" constant="14" id="PWr-fV-2h4"/>
                             <constraint firstAttribute="trailing" secondItem="3Y8-RK-s5A" secondAttribute="trailing" id="WR1-Lh-mvv"/>
                             <constraint firstItem="Lf4-tj-Rra" firstAttribute="width" secondItem="3Y8-RK-s5A" secondAttribute="width" multiplier="0.75" id="ZMd-xb-Gz4"/>
                             <constraint firstItem="Lf4-tj-Rra" firstAttribute="top" secondItem="cye-Cw-brG" secondAttribute="bottom" constant="8" id="ba4-9o-30n"/>

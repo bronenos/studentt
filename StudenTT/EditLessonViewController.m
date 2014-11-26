@@ -15,7 +15,7 @@
 #import "LessonRecord.h"
 #import "SubjectRecord.h"
 #import "NSDate+Utils.h"
-#import "RealmHelper.h"
+#import "AppHelper.h"
 
 
 static NSString * const kSubjectCellReuseID		= @"SubjectCell";
@@ -41,7 +41,7 @@ static NSString * const kAddSubjectCellReuseID	= @"AddSubjectCell";
 - (instancetype)initWithCoder:(NSCoder *)aDecoder
 {
 	if ((self = [super initWithCoder:aDecoder])) {
-		self.subjectResults = [SubjectRecord allObjectsInRealm:[RealmHelper sharedRealm]];
+		self.subjectResults = [SubjectRecord allObjectsInRealm:[AppHelper sharedRealm]];
 	}
 	
 	return self;
@@ -137,7 +137,7 @@ static NSString * const kAddSubjectCellReuseID	= @"AddSubjectCell";
 
 - (IBAction)doDone
 {
-	RLMRealm *realm = [RealmHelper sharedRealm];
+	RLMRealm *realm = [AppHelper sharedRealm];
 	[realm transactionWithBlock:^{
 		if (self.lessonRecord) {
 			[realm deleteObject:self.lessonRecord];
@@ -147,7 +147,7 @@ static NSString * const kAddSubjectCellReuseID	= @"AddSubjectCell";
 		self.tmpLessonRecord.endTime = [self.endTimePicker.date dateWithOnlyTimeAndSeconds:NO];
 		[self.dayRecord.lessons addObject:self.tmpLessonRecord];
 		
-		NSArray *sortedLessons = [RealmHelper objects:self.dayRecord.lessons
+		NSArray *sortedLessons = [AppHelper objects:self.dayRecord.lessons
 											 sortedBy:@"startTime"
 											ascending:YES];
 		

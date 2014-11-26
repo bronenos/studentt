@@ -12,7 +12,7 @@
 #import "RLMResults.h"
 #import "SubjectRecord.h"
 #import "SubjectCell.h"
-#import "RealmHelper.h"
+#import "AppHelper.h"
 
 
 static NSString * const kSubjectCellReuseID	= @"SubjectCell";
@@ -31,7 +31,7 @@ static NSString * const kEditSubjectSegueID	= @"EditSubject";
 - (instancetype)initWithCoder:(NSCoder *)aDecoder
 {
 	if ((self = [super initWithCoder:aDecoder])) {
-		RLMResults *subjectResults = [SubjectRecord allObjectsInRealm:[RealmHelper sharedRealm]];
+		RLMResults *subjectResults = [SubjectRecord allObjectsInRealm:[AppHelper sharedRealm]];
 		self.subjectResults = [subjectResults sortedResultsUsingProperty:@"title" ascending:YES];
 	}
 	
@@ -78,7 +78,7 @@ static NSString * const kEditSubjectSegueID	= @"EditSubject";
 #pragma mark - UITableViewDelegate
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
 {
-	RLMRealm *realm = [RealmHelper sharedRealm];
+	RLMRealm *realm = [AppHelper sharedRealm];
 	[realm transactionWithBlock:^{
 		[realm deleteObject:self.subjectResults[indexPath.row]];
 	}];

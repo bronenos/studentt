@@ -10,6 +10,7 @@
 #import "EditLessonViewController.h"
 #import "RLMRealm.h"
 #import "RLMResults.h"
+#import "ConfigRecord.h"
 #import "DayRecord.h"
 #import "LessonCell.h"
 #import "NSDate+Utils.h"
@@ -21,15 +22,23 @@ static NSString * const kAddLessonSegueID		= @"AddLesson";
 static NSString * const kEditLessonSegueID		= @"EditLesson";
 
 
+typedef NS_ENUM(NSInteger, WeekType) {
+	WeekTypeCommon,
+	WeekTypeOdd,
+	WeekTypeEven
+};
+
+
 @interface LessonsViewController() <UITableViewDataSource, UITableViewDelegate>
 @property(nonatomic, weak) IBOutlet UISegmentedControl *weekTypeControl;
 @property(nonatomic, weak) IBOutlet UITableView *tableView;
 
 @property(nonatomic, strong) RLMResults *timetableResults;
 
+- (void)setupWeekTypeControl;
 - (void)populateTable;
 
-- (IBAction)doSwitchWeeks;
+- (IBAction)doSwitchWeeks:(UISegmentedControl *)sender;
 @end
 
 
@@ -38,15 +47,33 @@ static NSString * const kEditLessonSegueID		= @"EditLesson";
 - (void)viewDidLoad
 {
 	[super viewDidLoad];
+	[self setupWeekTypeControl];
 	[self populateTable];
+}
+
+
+#pragma mark - Internal
+- (void)setupWeekTypeControl
+{
+	RLMRealm *realm = [AppHelper sharedRealm];
+	ConfigRecord *configRecord = [[ConfigRecord allObjectsInRealm:realm] firstObject];
+	
+	if (configRecord.commonMode) {
+		self.weekTypeControl.selectedSegmentIndex = WeekTypeCommon;
+	}
+	else {
+		const day_config_t dc = [AppHelper todayConfig];
+		self.weekTypeControl.selectedSegmentIndex = dc.is_odd ? WeekTypeOdd : WeekTypeEven;
+	}
 }
 
 
 - (void)populateTable
 {
-	const NSInteger oddFilter = self.weekTypeControl.selectedSegmentIndex;
+	const NSInteger segmentIndex = self.weekTypeControl.selectedSegmentIndex;
+	const BOOL oddFilter = (segmentIndex == WeekTypeCommon || segmentIndex == WeekTypeOdd);
 	
-	RLMResults *timetableResults = [DayRecord objectsInRealm:[RealmHelper sharedRealm]
+	RLMResults *timetableResults = [DayRecord objectsInRealm:[AppHelper sharedRealm]
 													   where:@"oddWeek == %@", @(oddFilter)];
 	self.timetableResults = [timetableResults sortedResultsUsingProperty:@"weekday" ascending:YES];
 	
@@ -126,7 +153,7 @@ static NSString * const kEditLessonSegueID		= @"EditLesson";
 #pragma mark - UITableViewDelegate
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
 {
-	RLMRealm *realm = [RealmHelper sharedRealm];
+	RLMRealm *realm = [AppHelper sharedRealm];
 	[realm transactionWithBlock:^{
 		DayRecord *dayRecord = self.timetableResults[indexPath.section];
 		LessonRecord *lessonRecord = dayRecord.lessons[indexPath.row];
@@ -138,8 +165,14 @@ static NSString * const kEditLessonSegueID		= @"EditLesson";
 
 
 #pragma mark - User
-- (IBAction)doSwitchWeeks
+- (IBAction)doSwitchWeeks:(UISegmentedControl *)sender
 {
+	RLMRealm *realm = [AppHelper sharedRealm];
+	[realm transactionWithBlock:^{
+		ConfigRecord *configRecord = [[ConfigRecord allObjectsInRealm:realm] firstObject];
+		configRecord.commonMode = (sender.selectedSegmentIndex == 0);
+	}];
+	
 	[self populateTable];
 }
 
