@@ -39,6 +39,9 @@
 		D479A3541A1E815F005F6E61 /* EditLessonViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D479A3531A1E815F005F6E61 /* EditLessonViewController.m */; };
 		D4D3A9891A1FE99300CE07B1 /* RealmHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = D4D3A9881A1FE99300CE07B1 /* RealmHelper.m */; };
 		D4D3A98C1A1FEB7200CE07B1 /* RealmHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = D4D3A98B1A1FEB7200CE07B1 /* RealmHelper.m */; };
+		D4D3B9F01A25D2CC0048C15F /* ConfigRecord.m in Sources */ = {isa = PBXBuildFile; fileRef = D4D3B9EF1A25D2CC0048C15F /* ConfigRecord.m */; };
+		D4D3B9F11A25DA2E0048C15F /* ConfigRecord.m in Sources */ = {isa = PBXBuildFile; fileRef = D4D3B9EF1A25D2CC0048C15F /* ConfigRecord.m */; };
+		D4D3B9F41A25DAF60048C15F /* RealmViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D4D3B9F31A25DAF60048C15F /* RealmViewController.m */; };
 		DA2252A3136E22A5F403664A /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9151EEA27B378405FCAFA049 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -135,6 +138,10 @@
 		D4D3A9881A1FE99300CE07B1 /* RealmHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RealmHelper.m; sourceTree = "<group>"; };
 		D4D3A98A1A1FEB7200CE07B1 /* RealmHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RealmHelper.h; path = StudenTT/RealmHelper.h; sourceTree = SOURCE_ROOT; };
 		D4D3A98B1A1FEB7200CE07B1 /* RealmHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RealmHelper.m; path = StudenTT/RealmHelper.m; sourceTree = SOURCE_ROOT; };
+		D4D3B9EE1A25D2CC0048C15F /* ConfigRecord.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConfigRecord.h; sourceTree = "<group>"; };
+		D4D3B9EF1A25D2CC0048C15F /* ConfigRecord.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConfigRecord.m; sourceTree = "<group>"; };
+		D4D3B9F21A25DAF60048C15F /* RealmViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RealmViewController.h; sourceTree = "<group>"; };
+		D4D3B9F31A25DAF60048C15F /* RealmViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RealmViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -182,6 +189,8 @@
 			children = (
 				D4D3A9871A1FE99300CE07B1 /* RealmHelper.h */,
 				D4D3A9881A1FE99300CE07B1 /* RealmHelper.m */,
+				D4D3B9EE1A25D2CC0048C15F /* ConfigRecord.h */,
+				D4D3B9EF1A25D2CC0048C15F /* ConfigRecord.m */,
 				D41656111A1D093900FDB640 /* SubjectRecord.h */,
 				D41656121A1D093900FDB640 /* SubjectRecord.m */,
 				D479A3481A1E58DC005F6E61 /* LessonRecord.h */,
@@ -305,6 +314,8 @@
 				D47920861A1D071500187814 /* Main.storyboard */,
 				D47920801A1D071500187814 /* AppDelegate.h */,
 				D47920811A1D071500187814 /* AppDelegate.m */,
+				D4D3B9F21A25DAF60048C15F /* RealmViewController.h */,
+				D4D3B9F31A25DAF60048C15F /* RealmViewController.m */,
 				D47920831A1D071500187814 /* LessonsViewController.h */,
 				D47920841A1D071500187814 /* LessonsViewController.m */,
 				D479A3521A1E815F005F6E61 /* EditLessonViewController.h */,
@@ -554,6 +565,7 @@
 				D47790681A1F7575009BE95D /* GlanceController.m in Sources */,
 				D47790931A1FAF26009BE95D /* SubjectRecord.m in Sources */,
 				D47790921A1FAF26009BE95D /* LessonRecord.m in Sources */,
+				D4D3B9F11A25DA2E0048C15F /* ConfigRecord.m in Sources */,
 				D47790911A1FAF26009BE95D /* DayRecord.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -562,6 +574,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D4D3B9F41A25DAF60048C15F /* RealmViewController.m in Sources */,
 				D47920851A1D071500187814 /* LessonsViewController.m in Sources */,
 				D47920821A1D071500187814 /* AppDelegate.m in Sources */,
 				D479A34D1A1E64FD005F6E61 /* LessonCell.m in Sources */,
@@ -570,6 +583,7 @@
 				D41656161A1D0B3500FDB640 /* SubjectsViewController.m in Sources */,
 				D479207F1A1D071500187814 /* main.m in Sources */,
 				D479A3541A1E815F005F6E61 /* EditLessonViewController.m in Sources */,
+				D4D3B9F01A25D2CC0048C15F /* ConfigRecord.m in Sources */,
 				D479A34A1A1E58DC005F6E61 /* LessonRecord.m in Sources */,
 				D4D3A9891A1FE99300CE07B1 /* RealmHelper.m in Sources */,
 				D41656131A1D093900FDB640 /* SubjectRecord.m in Sources */,

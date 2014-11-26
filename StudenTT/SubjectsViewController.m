@@ -20,11 +20,9 @@ static NSString * const kEditSubjectSegueID	= @"EditSubject";
 
 
 @interface SubjectsViewController()
-@property(nonatomic, strong) RLMResults *subjectResults;
-@property(nonatomic, strong) RLMNotificationToken *realmToken;
+@property(nonatomic, weak) IBOutlet UITableView *tableView;
 
-- (void)registerRealm;
-- (void)unregisterRealm;
+@property(nonatomic, strong) RLMResults *subjectResults;
 @end
 
 
@@ -35,33 +33,9 @@ static NSString * const kEditSubjectSegueID	= @"EditSubject";
 	if ((self = [super initWithCoder:aDecoder])) {
 		RLMResults *subjectResults = [SubjectRecord allObjectsInRealm:[RealmHelper sharedRealm]];
 		self.subjectResults = [subjectResults sortedResultsUsingProperty:@"title" ascending:YES];
-		
-		[self registerRealm];
 	}
 	
 	return self;
-}
-
-
-- (void)dealloc
-{
-	[self unregisterRealm];
-}
-
-
-#pragma mark - Internal
-- (void)registerRealm
-{
-	__weak __typeof(self) weakSelf = self;
-	self.realmToken = [[RealmHelper sharedRealm] addNotificationBlock:^(NSString *notification, RLMRealm *realm) {
-		[weakSelf.tableView reloadData];
-	}];
-}
-
-
-- (void)unregisterRealm
-{
-	[[RealmHelper sharedRealm] removeNotification:self.realmToken];
 }
 
 
@@ -102,18 +76,18 @@ static NSString * const kEditSubjectSegueID	= @"EditSubject";
 
 
 #pragma mark - UITableViewDelegate
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
-{
-	UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
-	[self performSegueWithIdentifier:kEditSubjectSegueID sender:cell];
-}
-
-
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
 {
 	RLMRealm *realm = [RealmHelper sharedRealm];
 	[realm transactionWithBlock:^{
 		[realm deleteObject:self.subjectResults[indexPath.row]];
 	}];
+}
+
+
+#pragma mark - Events
+- (void)onRealmDidUpdate:(NSString *)note
+{
+	[self.tableView reloadData];
 }
 @end

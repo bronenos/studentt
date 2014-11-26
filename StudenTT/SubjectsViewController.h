@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "RealmViewController.h"
 
 
-@interface SubjectsViewController : UITableViewController
+@interface SubjectsViewController : RealmViewController
 @end

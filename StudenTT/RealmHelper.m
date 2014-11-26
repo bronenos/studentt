@@ -6,7 +6,11 @@
 //  Copyright (c) 2014 bronenos. All rights reserved.
 //
 
+#import <Foundation/Foundation.h>
 #import "RealmHelper.h"
+#import "ConfigRecord.h"
+#import "DayRecord.h"
+#import "NSDate+Utils.h"
 
 
 static NSString * const kApplicationGroupID	= @"group.me.bronenos.studentt";
@@ -23,6 +27,39 @@ static NSString * const kApplicationGroupID	= @"group.me.bronenos.studentt";
 	}
 	
 	return [RLMRealm realmWithPath:realmPath];
+}
+
+
++ (void)generateDefaults
+{
+	RLMRealm *realm = [RealmHelper sharedRealm];
+	
+	if ([ConfigRecord allObjectsInRealm:realm].count == 0) {
+		[realm transactionWithBlock:^{
+			ConfigRecord *configRecord = [ConfigRecord new];
+			configRecord.commonMode = YES;
+			[realm addObject:configRecord];
+		}];
+	}
+	
+	if ([DayRecord allObjectsInRealm:realm].count == 0) {
+		[realm transactionWithBlock:^{
+			const NSInteger cnt = [NSDate sharedFormatter].weekdaySymbols.count;
+			for (NSUInteger i=0; i<cnt; i++) {
+				DayRecord *dayRecord;
+				
+				dayRecord = [DayRecord new];
+				dayRecord.oddWeek = NO;
+				dayRecord.weekday = i;
+				[realm addObject:dayRecord];
+				
+				dayRecord = [DayRecord new];
+				dayRecord.oddWeek = YES;
+				dayRecord.weekday = i;
+				[realm addObject:dayRecord];
+			}
+		}];
+	}
 }
 
 

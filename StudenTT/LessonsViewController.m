@@ -13,7 +13,6 @@
 #import "DayRecord.h"
 #import "LessonCell.h"
 #import "NSDate+Utils.h"
-#import "RealmHelper.h"
 
 
 static NSString * const kAddLessonCellReuseID	= @"AddLessonCell";
@@ -26,14 +25,8 @@ static NSString * const kEditLessonSegueID		= @"EditLesson";
 @property(nonatomic, weak) IBOutlet UISegmentedControl *weekTypeControl;
 @property(nonatomic, weak) IBOutlet UITableView *tableView;
 
-@property(nonatomic, strong) RLMRealm *realm;
 @property(nonatomic, strong) RLMResults *timetableResults;
-@property(nonatomic, strong) RLMNotificationToken *realmToken;
 
-- (void)registerRealm;
-- (void)unregisterRealm;
-
-- (void)generateDays;
 - (void)populateTable;
 
 - (IBAction)doSwitchWeeks;
@@ -41,66 +34,11 @@ static NSString * const kEditLessonSegueID		= @"EditLesson";
 
 
 @implementation LessonsViewController
-#pragma mark - Memory
-- (instancetype)initWithCoder:(NSCoder *)aDecoder
-{
-	if ((self = [super initWithCoder:aDecoder])) {
-		[self registerRealm];
-	}
-	
-	return self;
-}
-
-
-- (void)dealloc
-{
-	[self unregisterRealm];
-}
-
-
 #pragma mark - View
 - (void)viewDidLoad
 {
 	[super viewDidLoad];
 	[self populateTable];
-}
-
-
-#pragma mark - Internal
-- (void)registerRealm
-{
-	__weak __typeof(self) weakSelf = self;
-	self.realmToken = [[RealmHelper sharedRealm] addNotificationBlock:^(NSString *notification, RLMRealm *realm) {
-		[weakSelf.tableView reloadData];
-	}];
-}
-
-
-- (void)unregisterRealm
-{
-	[[RealmHelper sharedRealm] removeNotification:self.realmToken];
-}
-
-
-- (void)generateDays
-{
-	RLMRealm *realm = [RealmHelper sharedRealm];
-	[realm transactionWithBlock:^{
-		const NSInteger cnt = [NSDate sharedFormatter].weekdaySymbols.count;
-		for (NSUInteger i=0; i<cnt; i++) {
-			DayRecord *dayRecord;
-			
-			dayRecord = [DayRecord new];
-			dayRecord.oddWeek = NO;
-			dayRecord.weekday = i;
-			[realm addObject:dayRecord];
-			
-			dayRecord = [DayRecord new];
-			dayRecord.oddWeek = YES;
-			dayRecord.weekday = i;
-			[realm addObject:dayRecord];
-		}
-	}];
 }
 
 
@@ -111,10 +49,6 @@ static NSString * const kEditLessonSegueID		= @"EditLesson";
 	RLMResults *timetableResults = [DayRecord objectsInRealm:[RealmHelper sharedRealm]
 													   where:@"oddWeek == %@", @(oddFilter)];
 	self.timetableResults = [timetableResults sortedResultsUsingProperty:@"weekday" ascending:YES];
-	
-	if (self.timetableResults.count == 0) {
-		[self generateDays];
-	}
 	
 	[self.tableView reloadData];
 }
@@ -207,5 +141,12 @@ static NSString * const kEditLessonSegueID		= @"EditLesson";
 - (IBAction)doSwitchWeeks
 {
 	[self populateTable];
+}
+
+
+#pragma mark - Events
+- (void)onRealmDidUpdate:(NSString *)note
+{
+	[self.tableView reloadData];
 }
 @end

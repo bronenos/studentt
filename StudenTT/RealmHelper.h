@@ -13,6 +13,8 @@
 
 @interface RealmHelper : NSObject
 + (RLMRealm *)sharedRealm;
++ (void)generateDefaults;
+
 + (NSUInteger)indexOfObject:(id)object inResults:(RLMResults *)results;
 + (NSArray *)objects:(id)objects sortedBy:(NSString *)key ascending:(BOOL)asc;
 @end

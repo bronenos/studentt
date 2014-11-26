@@ -7,8 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "RealmViewController.h"
 
 
-@interface LessonsViewController : UIViewController
+@interface LessonsViewController : RealmViewController
 @end
 

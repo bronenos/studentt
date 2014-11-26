@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>350EB72E-FB0F-4FBB-9248-6DFF30F14972</string>
+	<key>IDESourceControlProjectName</key>
+	<string>StudenTT</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>5A97F4C9B8858CB8785138CED69D7A7075B8BBA2</key>
+		<string>github.com:bronenos/studentt.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>StudenTT.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>5A97F4C9B8858CB8785138CED69D7A7075B8BBA2</key>
+		<string>..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>github.com:bronenos/studentt.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>5A97F4C9B8858CB8785138CED69D7A7075B8BBA2</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>5A97F4C9B8858CB8785138CED69D7A7075B8BBA2</string>
+			<key>IDESourceControlWCCName</key>
+			<string>StudenTT</string>
+		</dict>
+	</array>
+</dict>
+</plist>
