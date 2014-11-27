@@ -28,7 +28,6 @@
 
 @property(nonatomic, weak) NSTimer *refreshTimer;
 
-- (DayRecord *)getDayRecord;
 - (void)buildGlance;
 
 - (void)hideAllObjects;
@@ -45,15 +44,6 @@
 
 @implementation GlanceController
 #pragma mark - Lifecicle
-- (instancetype)initWithContext:(id)context
-{
-	if ((self = [super initWithContext:context])) {
-	}
-	
-    return self;
-}
-
-
 - (void)willActivate
 {
 	[self buildGlance];
@@ -67,22 +57,12 @@
 
 
 #pragma mark - Internal
-- (DayRecord *)getDayRecord
-{
-	day_config_t dc = [AppHelper todayConfig];
-	
-	RLMResults *dayResults = [DayRecord objectsInRealm:[AppHelper sharedRealm]
-												 where:@"weekday == %d AND oddWeek == %d", dc.weekday, dc.is_odd];
-	return [dayResults firstObject];
-}
-
-
 - (void)buildGlance
 {
 	[self hideAllObjects];
 	
-	DayRecord *dayRecord = [self getDayRecord];
-	if (dayRecord) {
+	DayRecord *dayRecord = [AppHelper getDayRecord];
+	if (dayRecord.lessons.count) {
 		NSDate *nowTime = [[NSDate date] dateWithOnlyTimeAndSeconds:YES];
 		
 		for (NSInteger i=0, cnt=dayRecord.lessons.count; i<cnt; i++) {

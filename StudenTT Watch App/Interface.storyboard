@@ -5,15 +5,69 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="3734"/>
     </dependencies>
     <scenes>
-        <!--StudenTT-->
+        <!--sTT-->
         <scene sceneID="aou-V4-d1y">
             <objects>
-                <controller title="StudenTT" id="AgC-eL-Hgc" customClass="InterfaceController">
+                <controller title="sTT" spacing="16" id="AgC-eL-Hgc" customClass="InterfaceController">
                     <items>
-                        <timer width="1" alignment="left" textAlignment="center" format="abbreviated" previewedSeconds="80000" id="Q4B-m5-wcB">
-                            <calendarUnit key="units" hour="YES" minute="YES"/>
-                        </timer>
+                        <group width="1" alignment="left" layout="vertical" spacing="0.0" hasDetent="YES" id="rqo-1y-iZr" userLabel="Time &amp; Lesson Group">
+                            <items>
+                                <group width="1" alignment="left" hasDetent="YES" id="jZs-xG-Vp2" userLabel="Time Group">
+                                    <items>
+                                        <label alignment="left" text="10:10" id="Nij-Y2-RGO">
+                                            <fontDescription key="font" style="UICTFontTextStyleHeadline"/>
+                                        </label>
+                                        <label alignment="left" text="–" id="Oxk-TL-xTT">
+                                            <fontDescription key="font" style="UICTFontTextStyleHeadline"/>
+                                        </label>
+                                        <label alignment="left" text="11:40" id="Ozo-FW-xRN">
+                                            <fontDescription key="font" style="UICTFontTextStyleHeadline"/>
+                                        </label>
+                                    </items>
+                                </group>
+                                <label alignment="left" text="History" numberOfLines="2" id="uQe-ee-muM"/>
+                            </items>
+                        </group>
+                        <group width="1" alignment="left" layout="vertical" spacing="2" hasDetent="YES" id="N5X-mM-7UD" userLabel="Location &amp; Teacher Group">
+                            <items>
+                                <label alignment="left" text="210 room" id="BGS-pI-lkD">
+                                    <fontDescription key="font" style="UICTFontTextStyleCaption2"/>
+                                </label>
+                                <label alignment="left" text="Paul Jones" id="7Y1-0g-PnR">
+                                    <fontDescription key="font" style="UICTFontTextStyleCaption2"/>
+                                </label>
+                            </items>
+                        </group>
+                        <group width="1" alignment="left" verticalAlignment="bottom" hasDetent="YES" id="iRD-84-Kr8" userLabel="Navigation Group">
+                            <items>
+                                <button width="50" height="20" alignment="left" title="←" id="h7m-ET-1Bb">
+                                    <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                    <fontDescription key="font" style="UICTFontTextStyleHeadline"/>
+                                    <connections>
+                                        <action selector="doShowPrevious" destination="AgC-eL-Hgc" id="XcN-bU-tqp"/>
+                                    </connections>
+                                </button>
+                                <button width="50" height="20" alignment="right" title="→" id="IjV-oS-r9Z">
+                                    <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                    <fontDescription key="font" style="UICTFontTextStyleHeadline"/>
+                                    <connections>
+                                        <action selector="doShowNext" destination="AgC-eL-Hgc" id="fIo-wz-25D"/>
+                                    </connections>
+                                </button>
+                            </items>
+                        </group>
                     </items>
+                    <edgeInsets key="margins" left="0.0" right="0.0" top="14" bottom="0.0"/>
+                    <connections>
+                        <outlet property="endTimeLabel" destination="Ozo-FW-xRN" id="Phx-la-fVs"/>
+                        <outlet property="locationLabel" destination="BGS-pI-lkD" id="REg-vG-61I"/>
+                        <outlet property="nextLessonButton" destination="IjV-oS-r9Z" id="Xan-9q-sFI"/>
+                        <outlet property="prevLessonButton" destination="h7m-ET-1Bb" id="zRt-Ys-4JW"/>
+                        <outlet property="startTimeLabel" destination="Nij-Y2-RGO" id="W5t-oX-Yqu"/>
+                        <outlet property="teacherLabel" destination="7Y1-0g-PnR" id="ZFE-lE-SbT"/>
+                        <outlet property="timeGroup" destination="jZs-xG-Vp2" id="yDh-tz-8VO"/>
+                        <outlet property="titleLabel" destination="uQe-ee-muM" id="hOn-xB-6dt"/>
+                    </connections>
                 </controller>
             </objects>
             <point key="canvasLocation" x="164" y="217"/>

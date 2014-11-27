@@ -17,6 +17,9 @@ typedef struct {
 } day_config_t;
 
 
+@class DayRecord;
+
+
 @interface AppHelper : NSObject
 + (RLMRealm *)sharedRealm;
 + (void)generateDefaults;
@@ -25,4 +28,5 @@ typedef struct {
 + (NSArray *)objects:(id)objects sortedBy:(NSString *)key ascending:(BOOL)asc;
 
 + (day_config_t)todayConfig;
++ (DayRecord *)getDayRecord;
 @end

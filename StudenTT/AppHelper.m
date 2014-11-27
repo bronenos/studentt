@@ -90,17 +90,25 @@ static NSString * const kApplicationGroupID	= @"group.me.bronenos.studentt";
 
 + (day_config_t)todayConfig
 {
-	RLMRealm *realm = [AppHelper sharedRealm];
-	ConfigRecord *configRecord = [[ConfigRecord allObjectsInRealm:realm] firstObject];
-	
 	NSCalendarUnit units = NSCalendarUnitWeekday | NSCalendarUnitWeekOfYear;
 	NSDateComponents *comps = [[NSDate sharedCalendar] components:units fromDate:[NSDate date]];
 	const BOOL oddWeek = comps.weekOfYear & 1;
-	const NSInteger weekday = comps.weekday;
+	const int weekday = (int) comps.weekday;
 	
 	day_config_t dc;
 	dc.is_odd = oddWeek;
 	dc.weekday = weekday;
 	return dc;
+}
+
+
++ (DayRecord *)getDayRecord
+{
+	day_config_t dc = [AppHelper todayConfig];
+	
+	RLMResults *dayResults = [DayRecord objectsInRealm:[AppHelper sharedRealm]
+												 where:@"weekday == %d AND oddWeek == %d",
+							  dc.weekday, dc.is_odd];
+	return [dayResults firstObject];
 }
 @end

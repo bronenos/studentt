@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
    LastUpgradeVersion = "0620"
-   version = "2.0">
+   version = "1.8">
    <BuildAction
       parallelizeBuildables = "YES"
       buildImplicitDependencies = "YES">
@@ -75,8 +75,19 @@
       buildConfiguration = "Debug"
       ignoresPersistentStateOnLaunch = "NO"
       debugDocumentVersioning = "YES"
-      allowLocationSimulation = "YES"
-      launchAutomaticallySubstyle = "4">
+      allowLocationSimulation = "YES">
+      <RemoteRunnable
+         runnableDebuggingMode = "2"
+         BundleIdentifier = "com.apple.springboard"
+         RemotePath = "/StudenTT">
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "D477906C1A1F7575009BE95D"
+            BuildableName = "StudenTT Watch App.app"
+            BlueprintName = "StudenTT Watch App"
+            ReferencedContainer = "container:StudenTT.xcodeproj">
+         </BuildableReference>
+      </RemoteRunnable>
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
@@ -88,19 +99,6 @@
       </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
-      <RemoteRunnable
-         runnableDebuggingMode = "2"
-         BundleIdentifier = "com.apple.springboard"
-         launchOptions = "4"
-         RemotePath = "/StudenTT">
-         <BuildableReference
-            BuildableIdentifier = "primary"
-            BlueprintIdentifier = "D477906C1A1F7575009BE95D"
-            BuildableName = "StudenTT Watch App.app"
-            BlueprintName = "StudenTT Watch App"
-            ReferencedContainer = "container:StudenTT.xcodeproj">
-         </BuildableReference>
-      </RemoteRunnable>
    </LaunchAction>
    <ProfileAction
       shouldUseLaunchSchemeArgsEnv = "YES"
