@@ -17,13 +17,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Now" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1GC-pn-jN9" userLabel="Now Group">
-                                <rect key="frame" x="0.0" y="0.0" width="304" height="18"/>
+                                <rect key="frame" x="0.0" y="5" width="304" height="18"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="History, 13:00 - 14:30" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lAS-Uz-Pee" userLabel="Subject &amp; Time">
-                                <rect key="frame" x="0.0" y="23" width="304" height="18"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="History, 13:00-14:30" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lAS-Uz-Pee" userLabel="Subject &amp; Time">
+                                <rect key="frame" x="0.0" y="28" width="304" height="18"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="18" id="7HL-I0-cIl"/>
                                 </constraints>
@@ -31,20 +31,20 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="120 room, John Seddle" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sws-2g-Nuo" userLabel="Location, Teacher">
-                                <rect key="frame" x="0.0" y="44" width="304" height="18"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="120 room, Emma Palmon" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sws-2g-Nuo" userLabel="Location, Teacher">
+                                <rect key="frame" x="0.0" y="49" width="304" height="18"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Next" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ckl-Ch-xyn" userLabel="Next Group">
-                                <rect key="frame" x="0.0" y="71" width="304" height="18"/>
+                                <rect key="frame" x="0.0" y="76" width="304" height="18"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Math, 235 room" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cTe-y1-2at" userLabel="Subject &amp; Location">
-                                <rect key="frame" x="0.0" y="94" width="304" height="18"/>
+                                <rect key="frame" x="0.0" y="99" width="304" height="18"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
@@ -62,8 +62,8 @@
                             <constraint firstItem="cTe-y1-2at" firstAttribute="trailing" secondItem="lAS-Uz-Pee" secondAttribute="trailing" id="ThU-lv-fUH"/>
                             <constraint firstItem="sws-2g-Nuo" firstAttribute="leading" secondItem="lAS-Uz-Pee" secondAttribute="leading" id="UoG-bW-yWS"/>
                             <constraint firstItem="1GC-pn-jN9" firstAttribute="trailing" secondItem="Ckl-Ch-xyn" secondAttribute="trailing" id="Wo2-3b-3pt"/>
-                            <constraint firstItem="FKl-LY-JtV" firstAttribute="top" secondItem="cTe-y1-2at" secondAttribute="bottom" constant="68" id="Y1k-mA-9AX"/>
-                            <constraint firstItem="1GC-pn-jN9" firstAttribute="top" secondItem="Ft6-oW-KC0" secondAttribute="bottom" id="Z0R-Ny-fDO"/>
+                            <constraint firstItem="FKl-LY-JtV" firstAttribute="top" relation="greaterThanOrEqual" secondItem="cTe-y1-2at" secondAttribute="bottom" priority="250" placeholder="YES" id="Y1k-mA-9AX"/>
+                            <constraint firstItem="1GC-pn-jN9" firstAttribute="top" secondItem="Ft6-oW-KC0" secondAttribute="bottom" constant="5" id="Z0R-Ny-fDO"/>
                             <constraint firstItem="lAS-Uz-Pee" firstAttribute="trailing" secondItem="1GC-pn-jN9" secondAttribute="trailing" id="bP0-Ox-ZvW"/>
                             <constraint firstItem="1GC-pn-jN9" firstAttribute="leading" secondItem="Ckl-Ch-xyn" secondAttribute="leading" id="g6Q-lP-xae"/>
                             <constraint firstAttribute="trailing" secondItem="1GC-pn-jN9" secondAttribute="trailing" constant="16" id="qKO-3g-RPO"/>
@@ -76,6 +76,13 @@
                     <nil key="simulatedBottomBarMetrics"/>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="320" height="180"/>
+                    <connections>
+                        <outlet property="nextGroupLabel" destination="Ckl-Ch-xyn" id="Nua-QZ-P9L"/>
+                        <outlet property="nextSubjectWhereLabel" destination="cTe-y1-2at" id="3lG-a9-mhC"/>
+                        <outlet property="nowGroupLabel" destination="1GC-pn-jN9" id="Bfy-PQ-vfY"/>
+                        <outlet property="nowLocationTeacherLabel" destination="sws-2g-Nuo" id="tjq-ja-AZG"/>
+                        <outlet property="nowSubjectTimeLabel" destination="lAS-Uz-Pee" id="Q2t-5T-UQb"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vXp-U4-Rya" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

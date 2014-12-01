@@ -43,7 +43,7 @@
 
 
 @implementation GlanceController
-#pragma mark - Lifecicle
+#pragma mark - Lifecycle
 - (void)willActivate
 {
 	[self buildGlance];
