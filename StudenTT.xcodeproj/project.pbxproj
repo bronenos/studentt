@@ -37,6 +37,10 @@
 		D479A34D1A1E64FD005F6E61 /* LessonCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D479A34C1A1E64FD005F6E61 /* LessonCell.m */; };
 		D479A3511A1E7121005F6E61 /* NSDate+Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = D479A3501A1E7121005F6E61 /* NSDate+Utils.m */; };
 		D479A3541A1E815F005F6E61 /* EditLessonViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D479A3531A1E815F005F6E61 /* EditLessonViewController.m */; };
+		D4A49BAB1A2CDE5A00C25604 /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4A49BAA1A2CDE5A00C25604 /* NotificationCenter.framework */; };
+		D4A49BB11A2CDE5A00C25604 /* TodayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D4A49BB01A2CDE5A00C25604 /* TodayViewController.m */; };
+		D4A49BB31A2CDE5A00C25604 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D4A49BB21A2CDE5A00C25604 /* MainInterface.storyboard */; };
+		D4A49BB61A2CDE5A00C25604 /* Today.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = D4A49BA91A2CDE5A00C25604 /* Today.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		D4D3A9891A1FE99300CE07B1 /* AppHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = D4D3A9881A1FE99300CE07B1 /* AppHelper.m */; };
 		D4D3A98C1A1FEB7200CE07B1 /* AppHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = D4D3A98B1A1FEB7200CE07B1 /* AppHelper.m */; };
 		D4D3B9F01A25D2CC0048C15F /* ConfigRecord.m in Sources */ = {isa = PBXBuildFile; fileRef = D4D3B9EF1A25D2CC0048C15F /* ConfigRecord.m */; };
@@ -60,6 +64,13 @@
 			remoteGlobalIDString = D477905C1A1F7575009BE95D;
 			remoteInfo = "StudenTT WatchKit Extension";
 		};
+		D4A49BB41A2CDE5A00C25604 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D47920711A1D071500187814 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D4A49BA81A2CDE5A00C25604;
+			remoteInfo = Today;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -69,6 +80,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 13;
 			files = (
+				D4A49BB61A2CDE5A00C25604 /* Today.appex in Embed App Extensions */,
 				D477907A1A1F7575009BE95D /* StudenTT WatchKit Extension.appex in Embed App Extensions */,
 			);
 			name = "Embed App Extensions";
@@ -132,6 +144,12 @@
 		D479A3501A1E7121005F6E61 /* NSDate+Utils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+Utils.m"; sourceTree = "<group>"; };
 		D479A3521A1E815F005F6E61 /* EditLessonViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditLessonViewController.h; sourceTree = "<group>"; };
 		D479A3531A1E815F005F6E61 /* EditLessonViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditLessonViewController.m; sourceTree = "<group>"; };
+		D4A49BA91A2CDE5A00C25604 /* Today.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = Today.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		D4A49BAA1A2CDE5A00C25604 /* NotificationCenter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NotificationCenter.framework; path = System/Library/Frameworks/NotificationCenter.framework; sourceTree = SDKROOT; };
+		D4A49BAE1A2CDE5A00C25604 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D4A49BAF1A2CDE5A00C25604 /* TodayViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TodayViewController.h; sourceTree = "<group>"; };
+		D4A49BB01A2CDE5A00C25604 /* TodayViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TodayViewController.m; sourceTree = "<group>"; };
+		D4A49BB21A2CDE5A00C25604 /* MainInterface.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MainInterface.storyboard; sourceTree = "<group>"; };
 		D4D3A9851A1FE7BB00CE07B1 /* StudenTT.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = StudenTT.entitlements; sourceTree = "<group>"; };
 		D4D3A9861A1FE7ED00CE07B1 /* StudenTT WatchKit Extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "StudenTT WatchKit Extension.entitlements"; sourceTree = "<group>"; };
 		D4D3A9871A1FE99300CE07B1 /* AppHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppHelper.h; sourceTree = "<group>"; };
@@ -162,6 +180,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		D4A49BA61A2CDE5A00C25604 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D4A49BAB1A2CDE5A00C25604 /* NotificationCenter.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -180,6 +206,7 @@
 				D47790941A1FB061009BE95D /* libPods.a */,
 				9151EEA27B378405FCAFA049 /* libPods.a */,
 				D477905E1A1F7575009BE95D /* WatchKit.framework */,
+				D4A49BAA1A2CDE5A00C25604 /* NotificationCenter.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -283,6 +310,7 @@
 				D479207B1A1D071500187814 /* StudenTT */,
 				D47790601A1F7575009BE95D /* StudenTT WatchKit Extension */,
 				D47790711A1F7575009BE95D /* StudenTT Watch App */,
+				D4A49BAC1A2CDE5A00C25604 /* StudenTT Today Extension */,
 				D479207A1A1D071500187814 /* Products */,
 				5F30E0C08DCE9D6308B41641 /* Pods */,
 				B86B352CFCB30D2781262968 /* Frameworks */,
@@ -295,6 +323,7 @@
 				D47920791A1D071500187814 /* StudenTT.app */,
 				D477905D1A1F7575009BE95D /* StudenTT WatchKit Extension.appex */,
 				D477906D1A1F7575009BE95D /* StudenTT Watch App.app */,
+				D4A49BA91A2CDE5A00C25604 /* Today.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -346,6 +375,26 @@
 				D40FC9B91A23951E00CF719A /* UIView.m */,
 			);
 			name = Categories;
+			sourceTree = "<group>";
+		};
+		D4A49BAC1A2CDE5A00C25604 /* StudenTT Today Extension */ = {
+			isa = PBXGroup;
+			children = (
+				D4A49BAF1A2CDE5A00C25604 /* TodayViewController.h */,
+				D4A49BB01A2CDE5A00C25604 /* TodayViewController.m */,
+				D4A49BB21A2CDE5A00C25604 /* MainInterface.storyboard */,
+				D4A49BAD1A2CDE5A00C25604 /* Supporting Files */,
+			);
+			name = "StudenTT Today Extension";
+			path = Today;
+			sourceTree = "<group>";
+		};
+		D4A49BAD1A2CDE5A00C25604 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				D4A49BAE1A2CDE5A00C25604 /* Info.plist */,
+			);
+			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -401,11 +450,29 @@
 			);
 			dependencies = (
 				D47790791A1F7575009BE95D /* PBXTargetDependency */,
+				D4A49BB51A2CDE5A00C25604 /* PBXTargetDependency */,
 			);
 			name = StudenTT;
 			productName = StudenTT;
 			productReference = D47920791A1D071500187814 /* StudenTT.app */;
 			productType = "com.apple.product-type.application";
+		};
+		D4A49BA81A2CDE5A00C25604 /* Today */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D4A49BB91A2CDE5A00C25604 /* Build configuration list for PBXNativeTarget "Today" */;
+			buildPhases = (
+				D4A49BA51A2CDE5A00C25604 /* Sources */,
+				D4A49BA61A2CDE5A00C25604 /* Frameworks */,
+				D4A49BA71A2CDE5A00C25604 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Today;
+			productName = Today;
+			productReference = D4A49BA91A2CDE5A00C25604 /* Today.appex */;
+			productType = "com.apple.product-type.app-extension";
 		};
 /* End PBXNativeTarget section */
 
@@ -437,6 +504,10 @@
 							};
 						};
 					};
+					D4A49BA81A2CDE5A00C25604 = {
+						CreatedOnToolsVersion = 6.2;
+						DevelopmentTeam = V8NCXSZ3T7;
+					};
 				};
 			};
 			buildConfigurationList = D47920741A1D071500187814 /* Build configuration list for PBXProject "StudenTT" */;
@@ -455,6 +526,7 @@
 				D47920781A1D071500187814 /* StudenTT */,
 				D477905C1A1F7575009BE95D /* StudenTT WatchKit Extension */,
 				D477906C1A1F7575009BE95D /* StudenTT Watch App */,
+				D4A49BA81A2CDE5A00C25604 /* Today */,
 			);
 		};
 /* End PBXProject section */
@@ -486,6 +558,14 @@
 				D47920881A1D071500187814 /* Main.storyboard in Resources */,
 				D479208D1A1D071500187814 /* LaunchScreen.xib in Resources */,
 				D479208A1A1D071500187814 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D4A49BA71A2CDE5A00C25604 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D4A49BB31A2CDE5A00C25604 /* MainInterface.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -593,6 +673,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		D4A49BA51A2CDE5A00C25604 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D4A49BB11A2CDE5A00C25604 /* TodayViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -605,6 +693,11 @@
 			isa = PBXTargetDependency;
 			target = D477905C1A1F7575009BE95D /* StudenTT WatchKit Extension */;
 			targetProxy = D47790781A1F7575009BE95D /* PBXContainerItemProxy */;
+		};
+		D4A49BB51A2CDE5A00C25604 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D4A49BA81A2CDE5A00C25604 /* Today */;
+			targetProxy = D4A49BB41A2CDE5A00C25604 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -810,6 +903,34 @@
 			};
 			name = Release;
 		};
+		D4A49BB71A2CDE5A00C25604 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = Today/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		D4A49BB81A2CDE5A00C25604 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				INFOPLIST_FILE = Today/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -848,6 +969,14 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		D4A49BB91A2CDE5A00C25604 /* Build configuration list for PBXNativeTarget "Today" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D4A49BB71A2CDE5A00C25604 /* Debug */,
+				D4A49BB81A2CDE5A00C25604 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 	};

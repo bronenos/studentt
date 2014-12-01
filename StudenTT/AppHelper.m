@@ -45,7 +45,7 @@ static NSString * const kApplicationGroupID	= @"group.me.bronenos.studentt";
 	if ([DayRecord allObjectsInRealm:realm].count == 0) {
 		[realm transactionWithBlock:^{
 			const NSInteger cnt = [NSDate sharedFormatter].weekdaySymbols.count;
-			for (NSUInteger i=0; i<cnt; i++) {
+			for (NSUInteger i=1; i<=cnt; i++) {
 				DayRecord *dayRecord;
 				
 				dayRecord = [DayRecord new];
@@ -66,7 +66,7 @@ static NSString * const kApplicationGroupID	= @"group.me.bronenos.studentt";
 + (NSUInteger)indexOfObject:(id)object inResults:(RLMResults *)results
 {
 	for (NSInteger i=0, cnt=results.count; i<cnt; i++) {
-		if ([results[i] isEqual:object]) {
+		if ([results[i] isEqualToObject:object]) {
 			return i;
 		}
 	}

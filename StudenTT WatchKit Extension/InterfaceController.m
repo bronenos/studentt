@@ -50,7 +50,7 @@
 {
 	self.lessonResults = [AppHelper getDayRecord].lessons;
 	if (self.lessonResults.count) {
-		NSDate *timeDate = [[NSDate date] dateByAddingTimeInterval:YES];
+		NSDate *timeDate = [[NSDate date] dateWithOnlyTimeAndSeconds:YES];
 		
 		NSInteger cnt = self.lessonResults.count;
 		for (NSInteger i=0; i<cnt; i++) {
@@ -58,11 +58,11 @@
 			
 			if ([timeDate isBeforeLesson:lessonRecord]) {
 				self.lessonIndex = i;
-				break;
+				return;
 			}
 			else if ([timeDate isDuringLesson:lessonRecord]) {
 				self.lessonIndex = i;
-				break;
+				return;
 			}
 		}
 		

@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
    LastUpgradeVersion = "0620"
+   wasCreatedForAppExtension = "YES"
    version = "2.0">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -14,9 +15,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "D477906C1A1F7575009BE95D"
-               BuildableName = "StudenTT Watch App.app"
-               BlueprintName = "StudenTT Watch App"
+               BlueprintIdentifier = "D4A49BA81A2CDE5A00C25604"
+               BuildableName = "Today.appex"
+               BlueprintName = "Today"
                ReferencedContainer = "container:StudenTT.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -34,20 +35,6 @@
                ReferencedContainer = "container:StudenTT.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
-         <BuildActionEntry
-            buildForTesting = "YES"
-            buildForRunning = "YES"
-            buildForProfiling = "YES"
-            buildForArchiving = "YES"
-            buildForAnalyzing = "YES">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "D477905C1A1F7575009BE95D"
-               BuildableName = "StudenTT WatchKit Extension.appex"
-               BlueprintName = "StudenTT WatchKit Extension"
-               ReferencedContainer = "container:StudenTT.xcodeproj">
-            </BuildableReference>
-         </BuildActionEntry>
       </BuildActionEntries>
    </BuildAction>
    <TestAction
@@ -60,45 +47,33 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "D477906C1A1F7575009BE95D"
-            BuildableName = "StudenTT Watch App.app"
-            BlueprintName = "StudenTT Watch App"
+            BlueprintIdentifier = "D4A49BA81A2CDE5A00C25604"
+            BuildableName = "Today.appex"
+            BlueprintName = "Today"
             ReferencedContainer = "container:StudenTT.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </TestAction>
    <LaunchAction
-      selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
-      selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
+      selectedDebuggerIdentifier = ""
+      selectedLauncherIdentifier = "Xcode.IDEFoundation.Launcher.PosixSpawn"
       launchStyle = "0"
       useCustomWorkingDirectory = "NO"
       buildConfiguration = "Debug"
       ignoresPersistentStateOnLaunch = "NO"
       debugDocumentVersioning = "YES"
       allowLocationSimulation = "YES"
-      launchAutomaticallySubstyle = "4">
-      <RemoteRunnable
-         runnableDebuggingMode = "2"
-         BundleIdentifier = "com.apple.springboard"
-         launchOptions = "4"
-         RemotePath = "/StudenTT">
+      launchAutomaticallySubstyle = "2">
+      <BuildableProductRunnable
+         runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "D477906C1A1F7575009BE95D"
-            BuildableName = "StudenTT Watch App.app"
-            BlueprintName = "StudenTT Watch App"
+            BlueprintIdentifier = "D47920781A1D071500187814"
+            BuildableName = "StudenTT.app"
+            BlueprintName = "StudenTT"
             ReferencedContainer = "container:StudenTT.xcodeproj">
          </BuildableReference>
-      </RemoteRunnable>
-      <MacroExpansion>
-         <BuildableReference
-            BuildableIdentifier = "primary"
-            BlueprintIdentifier = "D477906C1A1F7575009BE95D"
-            BuildableName = "StudenTT Watch App.app"
-            BlueprintName = "StudenTT Watch App"
-            ReferencedContainer = "container:StudenTT.xcodeproj">
-         </BuildableReference>
-      </MacroExpansion>
+      </BuildableProductRunnable>
       <AdditionalOptions>
       </AdditionalOptions>
    </LaunchAction>
@@ -107,28 +82,18 @@
       savedToolIdentifier = ""
       useCustomWorkingDirectory = "NO"
       buildConfiguration = "Release"
-      debugDocumentVersioning = "YES">
-      <MacroExpansion>
+      debugDocumentVersioning = "YES"
+      launchAutomaticallySubstyle = "2">
+      <BuildableProductRunnable
+         runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "D477906C1A1F7575009BE95D"
-            BuildableName = "StudenTT Watch App.app"
-            BlueprintName = "StudenTT Watch App"
+            BlueprintIdentifier = "D47920781A1D071500187814"
+            BuildableName = "StudenTT.app"
+            BlueprintName = "StudenTT"
             ReferencedContainer = "container:StudenTT.xcodeproj">
          </BuildableReference>
-      </MacroExpansion>
-      <RemoteRunnable
-         runnableDebuggingMode = "2"
-         BundleIdentifier = "com.apple.springboard"
-         RemotePath = "/StudenTT">
-         <BuildableReference
-            BuildableIdentifier = "primary"
-            BlueprintIdentifier = "D477906C1A1F7575009BE95D"
-            BuildableName = "StudenTT Watch App.app"
-            BlueprintName = "StudenTT Watch App"
-            ReferencedContainer = "container:StudenTT.xcodeproj">
-         </BuildableReference>
-      </RemoteRunnable>
+      </BuildableProductRunnable>
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">

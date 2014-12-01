@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6221" systemVersion="14C68k" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="M4Y-Lb-cyx">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6213"/>
+    </dependencies>
+    <scenes>
+        <!--Today View Controller-->
+        <scene sceneID="cwh-vc-ff4">
+            <objects>
+                <viewController id="M4Y-Lb-cyx" customClass="TodayViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Ft6-oW-KC0"/>
+                        <viewControllerLayoutGuide type="bottom" id="FKl-LY-JtV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" simulatedAppContext="notificationCenter" id="S3S-Oj-5AN">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="180"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Now" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1GC-pn-jN9" userLabel="Now Group">
+                                <rect key="frame" x="0.0" y="0.0" width="304" height="18"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="History, 13:00 - 14:30" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lAS-Uz-Pee" userLabel="Subject &amp; Time">
+                                <rect key="frame" x="0.0" y="23" width="304" height="18"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="18" id="7HL-I0-cIl"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="120 room, John Seddle" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sws-2g-Nuo" userLabel="Location, Teacher">
+                                <rect key="frame" x="0.0" y="44" width="304" height="18"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Next" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ckl-Ch-xyn" userLabel="Next Group">
+                                <rect key="frame" x="0.0" y="71" width="304" height="18"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Math, 235 room" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cTe-y1-2at" userLabel="Subject &amp; Location">
+                                <rect key="frame" x="0.0" y="94" width="304" height="18"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="Ckl-Ch-xyn" firstAttribute="top" secondItem="sws-2g-Nuo" secondAttribute="bottom" constant="9" id="3UV-jM-gWY"/>
+                            <constraint firstItem="sws-2g-Nuo" firstAttribute="height" secondItem="lAS-Uz-Pee" secondAttribute="height" id="3gQ-e1-Zph"/>
+                            <constraint firstItem="lAS-Uz-Pee" firstAttribute="leading" secondItem="1GC-pn-jN9" secondAttribute="leading" id="4BP-gi-qtw"/>
+                            <constraint firstItem="cTe-y1-2at" firstAttribute="leading" secondItem="lAS-Uz-Pee" secondAttribute="leading" id="I7q-bn-Tp9"/>
+                            <constraint firstItem="lAS-Uz-Pee" firstAttribute="top" secondItem="1GC-pn-jN9" secondAttribute="bottom" constant="5" id="MBi-Xl-GLd"/>
+                            <constraint firstItem="sws-2g-Nuo" firstAttribute="trailing" secondItem="lAS-Uz-Pee" secondAttribute="trailing" id="MaD-X2-2i9"/>
+                            <constraint firstItem="cTe-y1-2at" firstAttribute="top" secondItem="Ckl-Ch-xyn" secondAttribute="bottom" constant="5" id="Mbm-kg-ise"/>
+                            <constraint firstItem="sws-2g-Nuo" firstAttribute="top" secondItem="lAS-Uz-Pee" secondAttribute="bottom" constant="3" id="Oof-jb-ChH"/>
+                            <constraint firstItem="cTe-y1-2at" firstAttribute="trailing" secondItem="lAS-Uz-Pee" secondAttribute="trailing" id="ThU-lv-fUH"/>
+                            <constraint firstItem="sws-2g-Nuo" firstAttribute="leading" secondItem="lAS-Uz-Pee" secondAttribute="leading" id="UoG-bW-yWS"/>
+                            <constraint firstItem="1GC-pn-jN9" firstAttribute="trailing" secondItem="Ckl-Ch-xyn" secondAttribute="trailing" id="Wo2-3b-3pt"/>
+                            <constraint firstItem="FKl-LY-JtV" firstAttribute="top" secondItem="cTe-y1-2at" secondAttribute="bottom" constant="68" id="Y1k-mA-9AX"/>
+                            <constraint firstItem="1GC-pn-jN9" firstAttribute="top" secondItem="Ft6-oW-KC0" secondAttribute="bottom" id="Z0R-Ny-fDO"/>
+                            <constraint firstItem="lAS-Uz-Pee" firstAttribute="trailing" secondItem="1GC-pn-jN9" secondAttribute="trailing" id="bP0-Ox-ZvW"/>
+                            <constraint firstItem="1GC-pn-jN9" firstAttribute="leading" secondItem="Ckl-Ch-xyn" secondAttribute="leading" id="g6Q-lP-xae"/>
+                            <constraint firstAttribute="trailing" secondItem="1GC-pn-jN9" secondAttribute="trailing" constant="16" id="qKO-3g-RPO"/>
+                            <constraint firstItem="1GC-pn-jN9" firstAttribute="leading" secondItem="S3S-Oj-5AN" secondAttribute="leading" id="wQw-4o-A1Q"/>
+                        </constraints>
+                    </view>
+                    <extendedEdge key="edgesForExtendedLayout"/>
+                    <nil key="simulatedStatusBarMetrics"/>
+                    <nil key="simulatedTopBarMetrics"/>
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="320" height="180"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vXp-U4-Rya" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="516" y="285"/>
+        </scene>
+    </scenes>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>

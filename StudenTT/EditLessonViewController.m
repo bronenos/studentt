@@ -101,7 +101,7 @@ static NSString * const kAddSubjectCellReuseID	= @"AddSubjectCell";
 {
 	if (indexPath.row < self.subjectResults.count) {
 		SubjectRecord *subjectRecord = self.subjectResults[indexPath.row];
-		const BOOL isActiveSubject = [self.tmpLessonRecord.subject isEqual:subjectRecord];
+		const BOOL isActiveSubject = [self.tmpLessonRecord.subject isEqualToObject:subjectRecord];
 		
 		SubjectCell *cell = (id) [tableView dequeueReusableCellWithIdentifier:kSubjectCellReuseID];
 		[cell configureWithSubject:subjectRecord isActive:isActiveSubject];
