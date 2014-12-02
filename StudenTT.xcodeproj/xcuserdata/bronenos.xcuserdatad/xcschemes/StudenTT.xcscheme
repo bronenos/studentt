@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
    LastUpgradeVersion = "0620"
-   version = "1.8">
+   version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
       buildImplicitDependencies = "YES">
@@ -34,6 +34,20 @@
                ReferencedContainer = "container:StudenTT.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "NO"
+            buildForArchiving = "NO"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "D438B7D81A2E1A330084A5C3"
+               BuildableName = "StudenTT-CommonTests.xctest"
+               BlueprintName = "StudenTT-CommonTests"
+               ReferencedContainer = "container:StudenTT.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
       </BuildActionEntries>
    </BuildAction>
    <TestAction
@@ -49,6 +63,16 @@
                BlueprintIdentifier = "D47920911A1D071500187814"
                BuildableName = "StudenTTTests.xctest"
                BlueprintName = "StudenTTTests"
+               ReferencedContainer = "container:StudenTT.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "D438B7D81A2E1A330084A5C3"
+               BuildableName = "StudenTT-CommonTests.xctest"
+               BlueprintName = "StudenTT-CommonTests"
                ReferencedContainer = "container:StudenTT.xcodeproj">
             </BuildableReference>
          </TestableReference>

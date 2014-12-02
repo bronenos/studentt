@@ -9,6 +9,11 @@
 			<key>orderHint</key>
 			<integer>1</integer>
 		</dict>
+		<key>StudenTT-Common.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>5</integer>
+		</dict>
 		<key>StudenTT.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
@@ -17,11 +22,21 @@
 		<key>Today.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>4</integer>
+			<integer>2</integer>
 		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>D438B7CE1A2E1A330084A5C3</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>D438B7D81A2E1A330084A5C3</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>D477905C1A1F7575009BE95D</key>
 		<dict>
 			<key>primary</key>

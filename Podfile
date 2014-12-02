@@ -4,7 +4,5 @@
 source 'https://github.com/CocoaPods/Specs.git'
 pod 'Realm'
 
-link_with 'StudenTT'
-link_with 'StudenTT WatchKit Extension'
-link_with 'Today'
+link_with 'StudenTT_Common'
 

@@ -35,6 +35,20 @@
                ReferencedContainer = "container:StudenTT.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "NO"
+            buildForArchiving = "NO"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "D438B7D81A2E1A330084A5C3"
+               BuildableName = "StudenTT-CommonTests.xctest"
+               BlueprintName = "StudenTT-CommonTests"
+               ReferencedContainer = "container:StudenTT.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
       </BuildActionEntries>
    </BuildAction>
    <TestAction
@@ -43,13 +57,23 @@
       shouldUseLaunchSchemeArgsEnv = "YES"
       buildConfiguration = "Debug">
       <Testables>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "D438B7D81A2E1A330084A5C3"
+               BuildableName = "StudenTT-CommonTests.xctest"
+               BlueprintName = "StudenTT-CommonTests"
+               ReferencedContainer = "container:StudenTT.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "D4A49BA81A2CDE5A00C25604"
-            BuildableName = "Today.appex"
-            BlueprintName = "Today"
+            BlueprintIdentifier = "D47920781A1D071500187814"
+            BuildableName = "StudenTT.app"
+            BlueprintName = "StudenTT"
             ReferencedContainer = "container:StudenTT.xcodeproj">
          </BuildableReference>
       </MacroExpansion>

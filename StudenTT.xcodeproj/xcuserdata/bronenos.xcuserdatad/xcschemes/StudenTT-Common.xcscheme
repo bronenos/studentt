@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0510"
+   LastUpgradeVersion = "0620"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -14,10 +14,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "CD68D99DD92ECD74080197E0"
-               BuildableName = "libPods-Realm.a"
-               BlueprintName = "Pods-Realm"
-               ReferencedContainer = "container:Pods.xcodeproj">
+               BlueprintIdentifier = "D438B7CE1A2E1A330084A5C3"
+               BuildableName = "StudenTT_Common.framework"
+               BlueprintName = "StudenTT_Common"
+               ReferencedContainer = "container:StudenTT.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -39,6 +39,15 @@
       ignoresPersistentStateOnLaunch = "NO"
       debugDocumentVersioning = "YES"
       allowLocationSimulation = "YES">
+      <MacroExpansion>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "D438B7CE1A2E1A330084A5C3"
+            BuildableName = "StudenTT_Common.framework"
+            BlueprintName = "StudenTT_Common"
+            ReferencedContainer = "container:StudenTT.xcodeproj">
+         </BuildableReference>
+      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </LaunchAction>
@@ -48,6 +57,15 @@
       useCustomWorkingDirectory = "NO"
       buildConfiguration = "Release"
       debugDocumentVersioning = "YES">
+      <MacroExpansion>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "D438B7CE1A2E1A330084A5C3"
+            BuildableName = "StudenTT_Common.framework"
+            BlueprintName = "StudenTT_Common"
+            ReferencedContainer = "container:StudenTT.xcodeproj">
+         </BuildableReference>
+      </MacroExpansion>
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">
