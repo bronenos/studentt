@@ -36,6 +36,8 @@
 
 - (void)scheduleRefreshTimerForTime:(NSDate *)timeDate;
 - (void)onRefreshTimer;
+
+- (IBAction)doOpenApp;
 @end
 
 
@@ -225,5 +227,13 @@
 - (void)onRefreshTimer
 {
 	[self performSelector:@selector(buildInterface) withObject:nil afterDelay:1];
+}
+
+
+#pragma mark - User
+- (IBAction)doOpenApp
+{
+	NSURL *url = [NSURL URLWithString:@"studentt://"];
+	[self.extensionContext openURL:url completionHandler:nil];
 }
 @end
