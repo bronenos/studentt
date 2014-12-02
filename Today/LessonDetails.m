@@ -27,7 +27,7 @@
 
 - (NSString *)subjectTimeString
 {
-	return [NSString stringWithFormat:@"%@, %@-%@",
+	return [NSString stringWithFormat:@"%@, %@ - %@",
 			self.title, self.startTime, self.endTime];
 }
 

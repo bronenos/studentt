@@ -7,13 +7,3 @@
 //
 
 #import <UIKit/UIKit.h>
-
-//! Project version number for StudenTT-Common.
-FOUNDATION_EXPORT double StudenTT_CommonVersionNumber;
-
-//! Project version string for StudenTT-Common.
-FOUNDATION_EXPORT const unsigned char StudenTT_CommonVersionString[];
-
-// In this header, you should import all the public headers of your framework using statements like #import <StudenTT_Common/PublicHeader.h>
-
-

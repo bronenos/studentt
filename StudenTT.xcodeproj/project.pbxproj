@@ -13,8 +13,6 @@
 		D416561A1A1D145E00FDB640 /* SubjectCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D41656191A1D145E00FDB640 /* SubjectCell.m */; };
 		D416561E1A1D3AF500FDB640 /* EditSubjectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D416561D1A1D3AF500FDB640 /* EditSubjectViewController.m */; };
 		D438B7D41A2E1A330084A5C3 /* StudenTT-Common.h in Headers */ = {isa = PBXBuildFile; fileRef = D438B7D31A2E1A330084A5C3 /* StudenTT-Common.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		D438B7DA1A2E1A330084A5C3 /* StudenTT_Common.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D438B7CF1A2E1A330084A5C3 /* StudenTT_Common.framework */; };
-		D438B7E31A2E1A330084A5C3 /* StudenTT_CommonTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D438B7E21A2E1A330084A5C3 /* StudenTT_CommonTests.m */; };
 		D438B7E61A2E1A340084A5C3 /* StudenTT_Common.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D438B7CF1A2E1A330084A5C3 /* StudenTT_Common.framework */; };
 		D438B7E71A2E1A340084A5C3 /* StudenTT_Common.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D438B7CF1A2E1A330084A5C3 /* StudenTT_Common.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		D438B7F01A2E1AB40084A5C3 /* ConfigRecord.m in Sources */ = {isa = PBXBuildFile; fileRef = D4D3B9EF1A25D2CC0048C15F /* ConfigRecord.m */; };
@@ -55,26 +53,26 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		D438B7DB1A2E1A330084A5C3 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D47920711A1D071500187814 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = D438B7CE1A2E1A330084A5C3;
-			remoteInfo = "StudenTT-Common";
-		};
-		D438B7DD1A2E1A330084A5C3 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D47920711A1D071500187814 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = D47920781A1D071500187814;
-			remoteInfo = StudenTT;
-		};
 		D438B7E41A2E1A340084A5C3 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D47920711A1D071500187814 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = D438B7CE1A2E1A330084A5C3;
 			remoteInfo = "StudenTT-Common";
+		};
+		D438B7F81A2E1E070084A5C3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D47920711A1D071500187814 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D438B7CE1A2E1A330084A5C3;
+			remoteInfo = StudenTT_Common;
+		};
+		D438B7FA1A2E1E1E0084A5C3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D47920711A1D071500187814 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D438B7CE1A2E1A330084A5C3;
+			remoteInfo = StudenTT_Common;
 		};
 		D477906F1A1F7575009BE95D /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -144,9 +142,6 @@
 		D438B7CF1A2E1A330084A5C3 /* StudenTT_Common.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = StudenTT_Common.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D438B7D21A2E1A330084A5C3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D438B7D31A2E1A330084A5C3 /* StudenTT-Common.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "StudenTT-Common.h"; sourceTree = "<group>"; };
-		D438B7D91A2E1A330084A5C3 /* StudenTT-CommonTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "StudenTT-CommonTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		D438B7E11A2E1A330084A5C3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		D438B7E21A2E1A330084A5C3 /* StudenTT_CommonTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StudenTT_CommonTests.m; sourceTree = "<group>"; };
 		D477905D1A1F7575009BE95D /* StudenTT WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "StudenTT WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D477905E1A1F7575009BE95D /* WatchKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WatchKit.framework; path = System/Library/Frameworks/WatchKit.framework; sourceTree = SDKROOT; };
 		D47790621A1F7575009BE95D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -212,14 +207,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				97BC88664931F0BB987E5910 /* libPods.a in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		D438B7D61A2E1A330084A5C3 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				D438B7DA1A2E1A330084A5C3 /* StudenTT_Common.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -320,23 +307,6 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		D438B7DF1A2E1A330084A5C3 /* StudenTT-CommonTests */ = {
-			isa = PBXGroup;
-			children = (
-				D438B7E21A2E1A330084A5C3 /* StudenTT_CommonTests.m */,
-				D438B7E01A2E1A330084A5C3 /* Supporting Files */,
-			);
-			path = "StudenTT-CommonTests";
-			sourceTree = "<group>";
-		};
-		D438B7E01A2E1A330084A5C3 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				D438B7E11A2E1A330084A5C3 /* Info.plist */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
 		D438B7EF1A2E1A6C0084A5C3 /* Categories */ = {
 			isa = PBXGroup;
 			children = (
@@ -396,7 +366,6 @@
 				D47790711A1F7575009BE95D /* StudenTT Watch App */,
 				D4A49BAC1A2CDE5A00C25604 /* StudenTT Today Extension */,
 				D438B7D01A2E1A330084A5C3 /* StudenTT-Common */,
-				D438B7DF1A2E1A330084A5C3 /* StudenTT-CommonTests */,
 				D479207A1A1D071500187814 /* Products */,
 				5F30E0C08DCE9D6308B41641 /* Pods */,
 				B86B352CFCB30D2781262968 /* Frameworks */,
@@ -411,7 +380,6 @@
 				D477906D1A1F7575009BE95D /* StudenTT Watch App.app */,
 				D4A49BA91A2CDE5A00C25604 /* Today.appex */,
 				D438B7CF1A2E1A330084A5C3 /* StudenTT_Common.framework */,
-				D438B7D91A2E1A330084A5C3 /* StudenTT-CommonTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -532,25 +500,6 @@
 			productReference = D438B7CF1A2E1A330084A5C3 /* StudenTT_Common.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		D438B7D81A2E1A330084A5C3 /* StudenTT-CommonTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = D438B7EE1A2E1A340084A5C3 /* Build configuration list for PBXNativeTarget "StudenTT-CommonTests" */;
-			buildPhases = (
-				D438B7D51A2E1A330084A5C3 /* Sources */,
-				D438B7D61A2E1A330084A5C3 /* Frameworks */,
-				D438B7D71A2E1A330084A5C3 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				D438B7DC1A2E1A330084A5C3 /* PBXTargetDependency */,
-				D438B7DE1A2E1A330084A5C3 /* PBXTargetDependency */,
-			);
-			name = "StudenTT-CommonTests";
-			productName = "StudenTT-CommonTests";
-			productReference = D438B7D91A2E1A330084A5C3 /* StudenTT-CommonTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 		D477905C1A1F7575009BE95D /* StudenTT WatchKit Extension */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = D47790801A1F7575009BE95D /* Build configuration list for PBXNativeTarget "StudenTT WatchKit Extension" */;
@@ -564,6 +513,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				D438B7F91A2E1E070084A5C3 /* PBXTargetDependency */,
 				D47790701A1F7575009BE95D /* PBXTargetDependency */,
 			);
 			name = "StudenTT WatchKit Extension";
@@ -623,6 +573,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				D438B7FB1A2E1E1E0084A5C3 /* PBXTargetDependency */,
 			);
 			name = Today;
 			productName = Today;
@@ -641,10 +592,6 @@
 					D438B7CE1A2E1A330084A5C3 = {
 						CreatedOnToolsVersion = 6.2;
 						DevelopmentTeam = V8NCXSZ3T7;
-					};
-					D438B7D81A2E1A330084A5C3 = {
-						CreatedOnToolsVersion = 6.2;
-						TestTargetID = D47920781A1D071500187814;
 					};
 					D477905C1A1F7575009BE95D = {
 						CreatedOnToolsVersion = 6.2;
@@ -696,20 +643,12 @@
 				D477906C1A1F7575009BE95D /* StudenTT Watch App */,
 				D4A49BA81A2CDE5A00C25604 /* Today */,
 				D438B7CE1A2E1A330084A5C3 /* StudenTT_Common */,
-				D438B7D81A2E1A330084A5C3 /* StudenTT-CommonTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
 		D438B7CD1A2E1A330084A5C3 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		D438B7D71A2E1A330084A5C3 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -892,14 +831,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		D438B7D51A2E1A330084A5C3 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				D438B7E31A2E1A330084A5C3 /* StudenTT_CommonTests.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		D47790591A1F7575009BE95D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -942,20 +873,20 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		D438B7DC1A2E1A330084A5C3 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = D438B7CE1A2E1A330084A5C3 /* StudenTT_Common */;
-			targetProxy = D438B7DB1A2E1A330084A5C3 /* PBXContainerItemProxy */;
-		};
-		D438B7DE1A2E1A330084A5C3 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = D47920781A1D071500187814 /* StudenTT */;
-			targetProxy = D438B7DD1A2E1A330084A5C3 /* PBXContainerItemProxy */;
-		};
 		D438B7E51A2E1A340084A5C3 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = D438B7CE1A2E1A330084A5C3 /* StudenTT_Common */;
 			targetProxy = D438B7E41A2E1A340084A5C3 /* PBXContainerItemProxy */;
+		};
+		D438B7F91A2E1E070084A5C3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D438B7CE1A2E1A330084A5C3 /* StudenTT_Common */;
+			targetProxy = D438B7F81A2E1E070084A5C3 /* PBXContainerItemProxy */;
+		};
+		D438B7FB1A2E1E1E0084A5C3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D438B7CE1A2E1A330084A5C3 /* StudenTT_Common */;
+			targetProxy = D438B7FA1A2E1E1E0084A5C3 /* PBXContainerItemProxy */;
 		};
 		D47790701A1F7575009BE95D /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -1037,38 +968,6 @@
 				SKIP_INSTALL = YES;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		D438B7EA1A2E1A340084A5C3 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = "StudenTT-CommonTests/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/StudenTT.app/StudenTT";
-			};
-			name = Debug;
-		};
-		D438B7EB1A2E1A340084A5C3 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = "StudenTT-CommonTests/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/StudenTT.app/StudenTT";
 			};
 			name = Release;
 		};
@@ -1296,15 +1195,6 @@
 			buildConfigurations = (
 				D438B7E81A2E1A340084A5C3 /* Debug */,
 				D438B7E91A2E1A340084A5C3 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		D438B7EE1A2E1A340084A5C3 /* Build configuration list for PBXNativeTarget "StudenTT-CommonTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				D438B7EA1A2E1A340084A5C3 /* Debug */,
-				D438B7EB1A2E1A340084A5C3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
