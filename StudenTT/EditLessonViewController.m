@@ -66,6 +66,7 @@ static NSString * const kAddSubjectCellReuseID	= @"AddSubjectCell";
 	
 	self.startTimePicker.date = self.tmpLessonRecord.startTime;
 	self.endTimePicker.date = self.tmpLessonRecord.endTime;
+	self.subjectTableView.contentInset = UIEdgeInsetsMake(-10, 0, 0, 0);
 }
 
 

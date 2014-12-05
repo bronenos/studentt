@@ -125,21 +125,14 @@
                         <viewControllerLayoutGuide type="bottom" id="xbO-di-8gJ"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="deF-vr-ASh">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <rect key="frame" x="0.0" y="0.0" width="480" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cnH-CR-hY6" userLabel="Anchor">
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" id="PX6-lW-7rJ"/>
-                                    <constraint firstAttribute="height" constant="12" id="gbR-2r-HVh"/>
-                                </constraints>
-                            </view>
                             <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="H5f-5M-Iqv" userLabel="Start View">
-                                <rect key="frame" x="7" y="72" width="150" height="220"/>
+                                <rect key="frame" x="8" y="72" width="216" height="220"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="start" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2lD-ft-LeV">
-                                        <rect key="frame" x="0.0" y="9" width="150" height="24"/>
+                                        <rect key="frame" x="0.0" y="9" width="216" height="24"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                         <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
@@ -150,7 +143,7 @@
                                         </userDefinedRuntimeAttributes>
                                     </label>
                                     <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="time" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="jVE-xp-rDZ" userLabel="Start Time Picker">
-                                        <rect key="frame" x="0.0" y="41" width="150" height="180"/>
+                                        <rect key="frame" x="0.0" y="41" width="216" height="180"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="180" id="gKX-sN-uju"/>
                                         </constraints>
@@ -166,6 +159,7 @@
                                     <constraint firstItem="2lD-ft-LeV" firstAttribute="width" secondItem="H5f-5M-Iqv" secondAttribute="width" id="cbU-a3-wqS"/>
                                     <constraint firstItem="jVE-xp-rDZ" firstAttribute="width" secondItem="H5f-5M-Iqv" secondAttribute="width" id="i1L-9s-Qn9"/>
                                     <constraint firstAttribute="centerX" secondItem="jVE-xp-rDZ" secondAttribute="centerX" id="ri7-kX-iV1"/>
+                                    <constraint firstAttribute="width" constant="150" id="rme-vQ-JLU"/>
                                     <constraint firstAttribute="height" constant="220" id="sMm-6D-PLi"/>
                                     <constraint firstItem="jVE-xp-rDZ" firstAttribute="top" secondItem="2lD-ft-LeV" secondAttribute="bottom" constant="8" id="xMh-d8-r2Z"/>
                                 </constraints>
@@ -180,12 +174,27 @@
                                         <real key="value" value="8"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="rme-vQ-JLU"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="rme-vQ-JLU"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=regular">
+                                    <mask key="constraints">
+                                        <include reference="rme-vQ-JLU"/>
+                                    </mask>
+                                </variation>
                             </view>
                             <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RvX-Wi-1nk" userLabel="End View">
-                                <rect key="frame" x="163" y="72" width="150" height="220"/>
+                                <rect key="frame" x="256" y="72" width="216" height="220"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="end" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6sO-1B-qaX">
-                                        <rect key="frame" x="0.0" y="9" width="150" height="24"/>
+                                        <rect key="frame" x="0.0" y="9" width="216" height="24"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                         <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
@@ -196,7 +205,7 @@
                                         </userDefinedRuntimeAttributes>
                                     </label>
                                     <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="time" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="z8L-06-sk7" userLabel="End Time Picker">
-                                        <rect key="frame" x="0.0" y="41" width="150" height="180"/>
+                                        <rect key="frame" x="0.0" y="41" width="216" height="180"/>
                                         <date key="date" timeIntervalSinceReferenceDate="438253159.31153798">
                                             <!--2014-11-21 08:59:19 +0000-->
                                         </date>
@@ -221,7 +230,7 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" translatesAutoresizingMaskIntoConstraints="NO" id="qWX-p2-Y81">
-                                <rect key="frame" x="0.0" y="307" width="320" height="173"/>
+                                <rect key="frame" x="0.0" y="307" width="480" height="173"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="none" accessoryType="checkmark" indentationWidth="10" reuseIdentifier="SubjectCell" textLabel="qaB-Xu-431" detailTextLabel="2eW-nH-Wqd" style="IBUITableViewCellStyleSubtitle" id="w6f-gE-gBY" customClass="SubjectCell">
@@ -272,24 +281,66 @@
                         </subviews>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="qWX-p2-Y81" firstAttribute="leading" secondItem="deF-vr-ASh" secondAttribute="leading" id="1Xg-wQ-LxS"/>
-                            <constraint firstItem="RvX-Wi-1nk" firstAttribute="leading" secondItem="cnH-CR-hY6" secondAttribute="trailing" constant="3" id="39Y-Ga-sJh"/>
+                            <constraint firstItem="qWX-p2-Y81" firstAttribute="leading" secondItem="H5f-5M-Iqv" secondAttribute="trailing" constant="8" id="2fg-6H-H35"/>
+                            <constraint firstItem="RvX-Wi-1nk" firstAttribute="leading" secondItem="qWX-p2-Y81" secondAttribute="trailing" constant="8" id="CH6-pm-IXH"/>
+                            <constraint firstItem="H5f-5M-Iqv" firstAttribute="width" secondItem="deF-vr-ASh" secondAttribute="width" multiplier="0.45" id="DA8-PE-6cg"/>
+                            <constraint firstItem="qWX-p2-Y81" firstAttribute="leading" secondItem="deF-vr-ASh" secondAttribute="leading" id="EZV-r0-nmD"/>
                             <constraint firstItem="RvX-Wi-1nk" firstAttribute="width" secondItem="H5f-5M-Iqv" secondAttribute="width" id="HQj-Tj-SGJ"/>
                             <constraint firstItem="RvX-Wi-1nk" firstAttribute="height" secondItem="H5f-5M-Iqv" secondAttribute="height" id="Iof-ja-Ye8"/>
-                            <constraint firstAttribute="centerX" secondItem="cnH-CR-hY6" secondAttribute="centerX" id="KSZ-EZ-4F3"/>
+                            <constraint firstItem="qWX-p2-Y81" firstAttribute="top" secondItem="H5f-5M-Iqv" secondAttribute="top" constant="-46" id="OpI-Ze-eba"/>
+                            <constraint firstItem="qWX-p2-Y81" firstAttribute="bottom" secondItem="H5f-5M-Iqv" secondAttribute="bottom" id="T7W-Tw-5pb"/>
                             <constraint firstItem="RvX-Wi-1nk" firstAttribute="top" secondItem="H5f-5M-Iqv" secondAttribute="top" id="W8B-ex-cJ1"/>
                             <constraint firstItem="z8L-06-sk7" firstAttribute="height" secondItem="jVE-xp-rDZ" secondAttribute="height" id="WHs-uX-QF9"/>
                             <constraint firstItem="xbO-di-8gJ" firstAttribute="top" secondItem="qWX-p2-Y81" secondAttribute="bottom" id="WoT-2A-ljj"/>
-                            <constraint firstAttribute="trailing" secondItem="qWX-p2-Y81" secondAttribute="trailing" id="YGr-8J-OYr"/>
-                            <constraint firstItem="qWX-p2-Y81" firstAttribute="top" secondItem="H5f-5M-Iqv" secondAttribute="bottom" constant="15" id="YXL-Zz-yOJ"/>
-                            <constraint firstItem="cnH-CR-hY6" firstAttribute="leading" secondItem="H5f-5M-Iqv" secondAttribute="trailing" constant="3" id="aah-xP-YPA"/>
+                            <constraint firstItem="H5f-5M-Iqv" firstAttribute="leading" secondItem="deF-vr-ASh" secondAttribute="leading" constant="8" id="ZCL-rx-Tp6"/>
+                            <constraint firstAttribute="centerY" secondItem="H5f-5M-Iqv" secondAttribute="centerY" id="ZQA-yl-rGA"/>
                             <constraint firstItem="2lD-ft-LeV" firstAttribute="top" secondItem="6sO-1B-qaX" secondAttribute="top" id="acq-xx-ScU"/>
                             <constraint firstItem="z8L-06-sk7" firstAttribute="width" secondItem="jVE-xp-rDZ" secondAttribute="width" id="koG-Ib-8iY"/>
-                            <constraint firstItem="H5f-5M-Iqv" firstAttribute="width" secondItem="deF-vr-ASh" secondAttribute="width" multiplier="0.47" id="rRN-T2-oQQ"/>
+                            <constraint firstAttribute="trailing" secondItem="RvX-Wi-1nk" secondAttribute="trailing" constant="8" id="mHn-uU-wbZ"/>
+                            <constraint firstAttribute="trailing" secondItem="qWX-p2-Y81" secondAttribute="trailing" id="pFD-ie-fpz"/>
                             <constraint firstItem="z8L-06-sk7" firstAttribute="top" secondItem="jVE-xp-rDZ" secondAttribute="top" id="uFP-ML-kaw"/>
-                            <constraint firstItem="cnH-CR-hY6" firstAttribute="top" secondItem="uOg-h5-rw3" secondAttribute="bottom" id="wLt-GN-d38"/>
+                            <constraint firstItem="qWX-p2-Y81" firstAttribute="top" secondItem="H5f-5M-Iqv" secondAttribute="bottom" constant="15" id="xEC-wy-ycm"/>
                             <constraint firstItem="H5f-5M-Iqv" firstAttribute="top" secondItem="uOg-h5-rw3" secondAttribute="bottom" constant="8" id="zQv-e2-JHr"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="ZQA-yl-rGA"/>
+                                <exclude reference="2fg-6H-H35"/>
+                                <exclude reference="OpI-Ze-eba"/>
+                                <exclude reference="T7W-Tw-5pb"/>
+                                <exclude reference="CH6-pm-IXH"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=compact">
+                            <mask key="constraints">
+                                <exclude reference="DA8-PE-6cg"/>
+                                <include reference="ZQA-yl-rGA"/>
+                                <exclude reference="zQv-e2-JHr"/>
+                                <include reference="2fg-6H-H35"/>
+                                <exclude reference="EZV-r0-nmD"/>
+                                <include reference="OpI-Ze-eba"/>
+                                <include reference="T7W-Tw-5pb"/>
+                                <exclude reference="pFD-ie-fpz"/>
+                                <exclude reference="xEC-wy-ycm"/>
+                                <include reference="CH6-pm-IXH"/>
+                                <exclude reference="WoT-2A-ljj"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=regular">
+                            <mask key="constraints">
+                                <exclude reference="DA8-PE-6cg"/>
+                                <include reference="ZQA-yl-rGA"/>
+                                <exclude reference="zQv-e2-JHr"/>
+                                <include reference="2fg-6H-H35"/>
+                                <exclude reference="EZV-r0-nmD"/>
+                                <include reference="OpI-Ze-eba"/>
+                                <include reference="T7W-Tw-5pb"/>
+                                <exclude reference="pFD-ie-fpz"/>
+                                <exclude reference="xEC-wy-ycm"/>
+                                <include reference="CH6-pm-IXH"/>
+                                <exclude reference="WoT-2A-ljj"/>
+                            </mask>
+                        </variation>
                     </view>
                     <navigationItem key="navigationItem" title="Edit Lesson" id="kIB-Eh-PlG">
                         <barButtonItem key="rightBarButtonItem" systemItem="done" id="qnL-Zw-II4">
@@ -298,6 +349,8 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="480" height="480"/>
                     <connections>
                         <outlet property="endTimePicker" destination="z8L-06-sk7" id="TDu-nL-D0V"/>
                         <outlet property="startTimePicker" destination="jVE-xp-rDZ" id="2GK-Vc-7Z2"/>
@@ -402,7 +455,7 @@
             <objects>
                 <tableViewController id="QSO-jU-MPQ" customClass="EditSubjectViewController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" keyboardDismissMode="interactive" dataMode="static" style="grouped" separatorStyle="default" allowsSelection="NO" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="6FS-GM-4gK">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <rect key="frame" x="0.0" y="0.0" width="480" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.93725490196078431" green="0.93725490196078431" blue="0.95686274509803926" alpha="1" colorSpace="calibratedRGB"/>
                         <sections>
@@ -424,7 +477,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Economics" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="79A-sa-Nfu" userLabel="Text Field">
-                                                    <rect key="frame" x="120" y="0.0" width="185" height="43"/>
+                                                    <rect key="frame" x="120" y="0.0" width="345" height="43"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits"/>
                                                 </textField>
@@ -456,7 +509,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="120 room" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2jc-lq-Awq" userLabel="Text Field">
-                                                    <rect key="frame" x="120" y="0.0" width="185" height="43"/>
+                                                    <rect key="frame" x="120" y="0.0" width="345" height="43"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits"/>
                                                 </textField>
@@ -488,7 +541,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Paul Jones" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pf6-eQ-MdF" userLabel="Text Field">
-                                                    <rect key="frame" x="120" y="0.0" width="185" height="43"/>
+                                                    <rect key="frame" x="120" y="0.0" width="345" height="43"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits"/>
                                                 </textField>
