@@ -13,6 +13,7 @@
 #import "LessonRecord.h"
 #import "LessonDetails.h"
 #import "NSDate+Utils.h"
+#import "NSString+Utils.h"
 
 
 @interface TodayViewController() <NCWidgetProviding>
@@ -128,7 +129,7 @@
 - (void)showObjectsForFreeDay
 {
 	self.nowGroupLabel.hidden = NO;
-	self.nowGroupLabel.text = NSLocalizedString(@"Free day", nil);
+	self.nowGroupLabel.text = [@"Free day" loc];
 	
 	[self setWidgetHeightWithLabel:self.nowGroupLabel];
 }
@@ -137,7 +138,7 @@
 - (void)showObjectsForFreeTime
 {
 	self.nowGroupLabel.hidden = NO;
-	self.nowGroupLabel.text = NSLocalizedString(@"Free time", nil);
+	self.nowGroupLabel.text = [@"Free time" loc];
 	
 	[self setWidgetHeightWithLabel:self.nowGroupLabel];
 }
@@ -148,7 +149,7 @@
 	LessonDetails *firstDetails = [LessonDetails lessonDetailsWithRecord:firstLessonRecord];
 	
 	self.nowGroupLabel.hidden = NO;
-	self.nowGroupLabel.text = NSLocalizedString(@"First", nil);
+	self.nowGroupLabel.text = [@"First" loc];
 	
 	self.nowSubjectTimeLabel.hidden = NO;
 	self.nowSubjectTimeLabel.text = [firstDetails subjectTimeString];
@@ -166,7 +167,7 @@
 	LessonDetails *nowDetails = [LessonDetails lessonDetailsWithRecord:nowLessonRecord];
 	
 	self.nowGroupLabel.hidden = NO;
-	self.nowGroupLabel.text = NSLocalizedString(@"Now", nil);
+	self.nowGroupLabel.text = [@"Now" loc];
 	
 	self.nowSubjectTimeLabel.hidden = NO;
 	self.nowSubjectTimeLabel.text = [nowDetails subjectTimeString];
@@ -181,7 +182,7 @@
 		LessonDetails *nextDetails = [LessonDetails lessonDetailsWithRecord:nextLessonRecord];
 		
 		self.nextGroupLabel.hidden = NO;
-		self.nextGroupLabel.text = NSLocalizedString(@"Next", nil);
+		self.nextGroupLabel.text = [@"Next" loc];
 		
 		self.nextSubjectWhereLabel.hidden = NO;
 		self.nextSubjectWhereLabel.text = [nextDetails subjectLocationString];
@@ -198,7 +199,7 @@
 	LessonDetails *nextDetails = [LessonDetails lessonDetailsWithRecord:nextLessonRecord];
 	
 	self.nowGroupLabel.hidden = NO;
-	self.nowGroupLabel.text = NSLocalizedString(@"Next", nil);
+	self.nowGroupLabel.text = [@"Next" loc];
 	
 	self.nowSubjectTimeLabel.hidden = NO;
 	self.nowSubjectTimeLabel.text = [nextDetails subjectTimeString];

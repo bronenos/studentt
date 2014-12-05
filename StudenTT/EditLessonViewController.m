@@ -14,8 +14,9 @@
 #import "DayRecord.h"
 #import "LessonRecord.h"
 #import "SubjectRecord.h"
-#import "NSDate+Utils.h"
 #import "AppHelper.h"
+#import "NSDate+Utils.h"
+#import "NSString+Utils.h"
 
 
 static NSString * const kSubjectCellReuseID		= @"SubjectCell";
@@ -87,7 +88,7 @@ static NSString * const kAddSubjectCellReuseID	= @"AddSubjectCell";
 #pragma mark - UITableViewDataSource
 - (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
 {
-	return NSLocalizedString(@"Choose a subject", nil);
+	return [@"Choose a subject" loc];
 }
 
 

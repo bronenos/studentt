@@ -23,6 +23,13 @@
 		D438B7F51A2E1ACB0084A5C3 /* AppHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = D4D3A9881A1FE99300CE07B1 /* AppHelper.m */; };
 		D438B7F61A2E1B8D0084A5C3 /* StudenTT_Common.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D438B7CF1A2E1A330084A5C3 /* StudenTT_Common.framework */; };
 		D438B7F71A2E1C4B0084A5C3 /* StudenTT_Common.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D438B7CF1A2E1A330084A5C3 /* StudenTT_Common.framework */; };
+		D438B8001A2E229F0084A5C3 /* Common.strings in Resources */ = {isa = PBXBuildFile; fileRef = D438B8021A2E229F0084A5C3 /* Common.strings */; };
+		D46FF7F81A31FE6C001886BB /* NSString+Utils.h in Headers */ = {isa = PBXBuildFile; fileRef = D46FF7F61A31FE6C001886BB /* NSString+Utils.h */; };
+		D46FF7F91A31FE6C001886BB /* NSString+Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = D46FF7F71A31FE6C001886BB /* NSString+Utils.m */; };
+		D46FF7FB1A32133C001886BB /* Common.strings in Resources */ = {isa = PBXBuildFile; fileRef = D438B8021A2E229F0084A5C3 /* Common.strings */; };
+		D46FF7FC1A32133C001886BB /* Common.strings in Resources */ = {isa = PBXBuildFile; fileRef = D438B8021A2E229F0084A5C3 /* Common.strings */; };
+		D46FF7FD1A32133D001886BB /* Common.strings in Resources */ = {isa = PBXBuildFile; fileRef = D438B8021A2E229F0084A5C3 /* Common.strings */; };
+		D46FF7FE1A32133E001886BB /* Common.strings in Resources */ = {isa = PBXBuildFile; fileRef = D438B8021A2E229F0084A5C3 /* Common.strings */; };
 		D477905F1A1F7575009BE95D /* WatchKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D477905E1A1F7575009BE95D /* WatchKit.framework */; };
 		D47790651A1F7575009BE95D /* InterfaceController.m in Sources */ = {isa = PBXBuildFile; fileRef = D47790641A1F7575009BE95D /* InterfaceController.m */; };
 		D47790681A1F7575009BE95D /* GlanceController.m in Sources */ = {isa = PBXBuildFile; fileRef = D47790671A1F7575009BE95D /* GlanceController.m */; };
@@ -142,6 +149,12 @@
 		D438B7CF1A2E1A330084A5C3 /* StudenTT_Common.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = StudenTT_Common.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D438B7D21A2E1A330084A5C3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D438B7D31A2E1A330084A5C3 /* StudenTT-Common.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "StudenTT-Common.h"; sourceTree = "<group>"; };
+		D438B7FE1A2E228F0084A5C3 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		D438B7FF1A2E22900084A5C3 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Main.strings; sourceTree = "<group>"; };
+		D438B8011A2E229F0084A5C3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Common.strings; sourceTree = "<group>"; };
+		D438B8031A2E22A10084A5C3 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Common.strings; sourceTree = "<group>"; };
+		D46FF7F61A31FE6C001886BB /* NSString+Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSString+Utils.h"; path = "StudenTT/NSString+Utils.h"; sourceTree = SOURCE_ROOT; };
+		D46FF7F71A31FE6C001886BB /* NSString+Utils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSString+Utils.m"; path = "StudenTT/NSString+Utils.m"; sourceTree = SOURCE_ROOT; };
 		D477905D1A1F7575009BE95D /* StudenTT WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "StudenTT WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D477905E1A1F7575009BE95D /* WatchKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WatchKit.framework; path = System/Library/Frameworks/WatchKit.framework; sourceTree = SDKROOT; };
 		D47790621A1F7575009BE95D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -303,6 +316,7 @@
 			isa = PBXGroup;
 			children = (
 				D438B7D21A2E1A330084A5C3 /* Info.plist */,
+				D438B8021A2E229F0084A5C3 /* Common.strings */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -312,6 +326,8 @@
 			children = (
 				D4A49BC51A2D145600C25604 /* NSDate+Utils.h */,
 				D4A49BC61A2D145600C25604 /* NSDate+Utils.m */,
+				D46FF7F61A31FE6C001886BB /* NSString+Utils.h */,
+				D46FF7F71A31FE6C001886BB /* NSString+Utils.m */,
 			);
 			name = Categories;
 			sourceTree = "<group>";
@@ -473,6 +489,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D46FF7F81A31FE6C001886BB /* NSString+Utils.h in Headers */,
 				D438B7D41A2E1A330084A5C3 /* StudenTT-Common.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -632,6 +649,7 @@
 			knownRegions = (
 				en,
 				Base,
+				ru,
 			);
 			mainGroup = D47920701A1D071500187814;
 			productRefGroup = D479207A1A1D071500187814 /* Products */;
@@ -652,6 +670,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D438B8001A2E229F0084A5C3 /* Common.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -661,6 +680,7 @@
 			files = (
 				D477906E1A1F7575009BE95D /* StudenTT Watch App.app in Resources */,
 				D477906A1A1F7575009BE95D /* Images.xcassets in Resources */,
+				D46FF7FC1A32133C001886BB /* Common.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -671,6 +691,7 @@
 				D47790851A1FA217009BE95D /* LittleWatchIcon.png in Resources */,
 				D47790751A1F7575009BE95D /* Interface.storyboard in Resources */,
 				D47790771A1F7575009BE95D /* Images.xcassets in Resources */,
+				D46FF7FD1A32133D001886BB /* Common.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -681,6 +702,7 @@
 				D47920881A1D071500187814 /* Main.storyboard in Resources */,
 				D479208D1A1D071500187814 /* LaunchScreen.xib in Resources */,
 				D479208A1A1D071500187814 /* Images.xcassets in Resources */,
+				D46FF7FB1A32133C001886BB /* Common.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -689,6 +711,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D4A49BB31A2CDE5A00C25604 /* MainInterface.storyboard in Resources */,
+				D46FF7FE1A32133E001886BB /* Common.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -824,6 +847,7 @@
 			files = (
 				D438B7F01A2E1AB40084A5C3 /* ConfigRecord.m in Sources */,
 				D438B7F21A2E1ABD0084A5C3 /* LessonRecord.m in Sources */,
+				D46FF7F91A31FE6C001886BB /* NSString+Utils.m in Sources */,
 				D438B7F11A2E1ABA0084A5C3 /* SubjectRecord.m in Sources */,
 				D438B7F31A2E1AC00084A5C3 /* DayRecord.m in Sources */,
 				D438B7F41A2E1AC40084A5C3 /* NSDate+Utils.m in Sources */,
@@ -906,10 +930,20 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		D438B8021A2E229F0084A5C3 /* Common.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D438B8011A2E229F0084A5C3 /* Base */,
+				D438B8031A2E22A10084A5C3 /* ru */,
+			);
+			name = Common.strings;
+			sourceTree = "<group>";
+		};
 		D47920861A1D071500187814 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				D47920871A1D071500187814 /* Base */,
+				D438B7FF1A2E22900084A5C3 /* ru */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -918,6 +952,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				D479208C1A1D071500187814 /* Base */,
+				D438B7FE1A2E228F0084A5C3 /* ru */,
 			);
 			name = LaunchScreen.xib;
 			sourceTree = "<group>";
@@ -945,6 +980,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				STRINGS_FILE_OUTPUT_ENCODING = "UTF-8";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
@@ -966,6 +1002,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				STRINGS_FILE_OUTPUT_ENCODING = "UTF-8";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
@@ -1083,6 +1120,7 @@
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
+				STRINGS_FILE_OUTPUT_ENCODING = "UTF-8";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -1118,6 +1156,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
+				STRINGS_FILE_OUTPUT_ENCODING = "UTF-8";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 			};

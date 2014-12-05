@@ -10,8 +10,9 @@
 #import "RLMRealm.h"
 #import "RLMResults.h"
 #import "DayRecord.h"
-#import "NSDate+Utils.h"
 #import "AppHelper.h"
+#import "NSDate+Utils.h"
+#import "NSString+Utils.h"
 
 
 @interface GlanceController()
@@ -116,27 +117,27 @@
 - (void)showObjectsForFreeDay
 {
 	[self.nowLabel setHidden:NO];
-	[self.nowLabel setText:NSLocalizedString(@"Free day", nil)];
+	[self.nowLabel setText:[@"Free day" loc]];
 }
 
 
 - (void)showObjectsForFreeTime
 {
 	[self.nowLabel setHidden:NO];
-	[self.nowLabel setText:NSLocalizedString(@"Free time", nil)];
+	[self.nowLabel setText:[@"Free time" loc]];
 }
 
 
 - (void)showObjectsForFirstLesson:(LessonRecord *)firstLessonRecord
 {
 	[self.nowLabel setHidden:NO];
-	[self.nowLabel setText:NSLocalizedString(@"First", nil)];
+	[self.nowLabel setText:[@"First" loc]];
 	
 	[self.nowLessonLabel setHidden:NO];
 	[self.nowLessonLabel setText:firstLessonRecord.subject.title];
 	
 	[self.nowTimeInLabel setHidden:NO];
-	[self.nowTimeInLabel setText:NSLocalizedString(@"starts in", nil)];
+	[self.nowTimeInLabel setText:[@"starts in" loc]];
 	
 	[self scheduleRefreshTimerForTime:firstLessonRecord.startTime];
 	
@@ -151,7 +152,7 @@
 - (void)showObjectsForNowLesson:(LessonRecord *)nowLessonRecord nextLesson:(LessonRecord *)nextLessonRecord
 {
 	[self.nowLabel setHidden:NO];
-	[self.nowLabel setText:NSLocalizedString(@"Now", nil)];
+	[self.nowLabel setText:[@"Now" loc]];
 	
 	[self.nowLessonLabel setHidden:NO];
 	[self.nowLessonLabel setText:nowLessonRecord.subject.title];
@@ -159,18 +160,18 @@
 	[self scheduleRefreshTimerForTime:nowLessonRecord.endTime];
 	
 	[self.nowTimeInLabel setHidden:NO];
-	[self.nowTimeInLabel setText:NSLocalizedString(@"ends in", nil)];
+	[self.nowTimeInLabel setText:[@"ends in" loc]];
 	
 	if (nextLessonRecord) {
 		[self.nextLabel setHidden:NO];
-		[self.nextLabel setText:NSLocalizedString(@"Next", nil)];
+		[self.nextLabel setText:[@"Next" loc]];
 		
 		[self.nextLessonLabel setHidden:NO];
 		[self.nextLessonLabel setText:nextLessonRecord.subject.title];
 	}
 	else {
 		[self.nextLabel setHidden:NO];
-		[self.nextLabel setText:NSLocalizedString(@"Then free time", nil)];
+		[self.nextLabel setText:[@"Then free time" loc]];
 	}
 }
 
@@ -178,13 +179,13 @@
 - (void)showObjectsForNextLesson:(LessonRecord *)nextLessonRecord
 {
 	[self.nowLabel setHidden:NO];
-	[self.nowLabel setText:NSLocalizedString(@"Next", nil)];
+	[self.nowLabel setText:[@"Next" loc]];
 	
 	[self.nowLessonLabel setHidden:NO];
 	[self.nowLessonLabel setText:nextLessonRecord.subject.title];
 	
 	[self.nowTimeInLabel setHidden:NO];
-	[self.nowTimeInLabel setText:NSLocalizedString(@"starts in", nil)];
+	[self.nowTimeInLabel setText:[@"starts in" loc]];
 	
 	[self scheduleRefreshTimerForTime:nextLessonRecord.startTime];
 	

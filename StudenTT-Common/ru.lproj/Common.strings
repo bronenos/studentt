@@ -1,0 +1,19 @@
+/* 
+  Common.strings
+  StudenTT
+
+  Created by Stan Potemkin on 12/2/14.
+  Copyright (c) 2014 bronenos. All rights reserved.
+*/
+
+"Choose a subject" = "Выберите предмет";
+
+"Free day" = "Свободный день";
+"Free time" = "Свободное время";
+
+"First" = "Сперва";
+"Now" = "Сейчас";
+"Next" = "Затем";
+
+"starts in" = "до начала";
+"ends in" = "до конца";

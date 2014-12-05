@@ -1,0 +1,75 @@
+
+/* Class = "IBUILabel"; text = "Location, Teacher"; ObjectID = "2eW-nH-Wqd"; */
+"2eW-nH-Wqd.text" = "Аудитория, Преподаватель";
+
+/* Class = "IBUITextField"; placeholder = "120 room"; ObjectID = "2jc-lq-Awq"; */
+"2jc-lq-Awq.placeholder" = "120";
+
+/* Class = "IBUILabel"; text = "start time"; ObjectID = "2lD-ft-LeV"; */
+"2lD-ft-LeV.text" = "начало";
+
+/* Class = "IBUILabel"; text = "Subject, Location"; ObjectID = "3HU-rR-KII"; */
+"3HU-rR-KII.text" = "Предмет, Аудитория";
+
+/* Class = "IBUILabel"; text = "end time"; ObjectID = "6sO-1B-qaX"; */
+"6sO-1B-qaX.text" = "конец";
+
+/* Class = "IBUITextField"; placeholder = "Economics"; ObjectID = "79A-sa-Nfu"; */
+"79A-sa-Nfu.placeholder" = "Экономика";
+
+/* Class = "IBUILabel"; text = "Teacher"; ObjectID = "Dc4-9C-t5G"; */
+"Dc4-9C-t5G.text" = "Преподаватель";
+
+/* Class = "IBUINavigationItem"; title = "Lessons"; ObjectID = "JvL-vS-ENf"; */
+"JvL-vS-ENf.title" = "Занятия";
+
+/* Class = "IBUISegmentedControl"; Lf4-tj-Rra.segmentTitles[0] = "Common"; ObjectID = "Lf4-tj-Rra"; */
+"Lf4-tj-Rra.segmentTitles[0]" = "Общее";
+
+/* Class = "IBUISegmentedControl"; Lf4-tj-Rra.segmentTitles[1] = "Odd"; ObjectID = "Lf4-tj-Rra"; */
+"Lf4-tj-Rra.segmentTitles[1]" = "Нечетная";
+
+/* Class = "IBUISegmentedControl"; Lf4-tj-Rra.segmentTitles[2] = "Even"; ObjectID = "Lf4-tj-Rra"; */
+"Lf4-tj-Rra.segmentTitles[2]" = "Четная";
+
+/* Class = "IBUILabel"; text = "Title"; ObjectID = "Rv6-V5-qbn"; */
+"Rv6-V5-qbn.text" = "Название";
+
+/* Class = "IBUILabel"; text = "Week to configure"; ObjectID = "cye-Cw-brG"; */
+"cye-Cw-brG.text" = "Выберите неделю";
+
+/* Class = "IBUILabel"; text = "Add subject"; ObjectID = "dRT-Ju-3ch"; */
+"dRT-Ju-3ch.text" = "Добавить предмет";
+
+/* Class = "IBUILabel"; text = "StartTime – EndTime"; ObjectID = "gFI-2V-r92"; */
+"gFI-2V-r92.text" = "StartTime – EndTime";
+
+/* Class = "IBUILabel"; text = "Add lesson"; ObjectID = "i2R-X7-Pj1"; */
+"i2R-X7-Pj1.text" = "Добавить занятие";
+
+/* Class = "IBUILabel"; text = "Title"; ObjectID = "jQd-IZ-m14"; */
+"jQd-IZ-m14.text" = "Название";
+
+/* Class = "IBUILabel"; text = "Location, Teacher"; ObjectID = "jV4-F6-Nlk"; */
+"jV4-F6-Nlk.text" = "Location, Teacher";
+
+/* Class = "IBUINavigationItem"; title = "Edit Lesson"; ObjectID = "kIB-Eh-PlG"; */
+"kIB-Eh-PlG.title" = "Редактировать занятие";
+
+/* Class = "IBUINavigationItem"; title = "Lesson"; ObjectID = "kXC-6Y-O8p"; */
+"kXC-6Y-O8p.title" = "Занятие";
+
+/* Class = "IBUILabel"; text = "Location"; ObjectID = "m3d-f0-aRl"; */
+"m3d-f0-aRl.text" = "Аудитория";
+
+/* Class = "IBUITextField"; placeholder = "Paul Jones"; ObjectID = "pf6-eQ-MdF"; */
+"pf6-eQ-MdF.placeholder" = "Козлова Мария Александровна";
+
+/* Class = "IBUILabel"; text = "Subject"; ObjectID = "qaB-Xu-431"; */
+"qaB-Xu-431.text" = "Предмет";
+
+/* Class = "IBUIBarButtonItem"; title = "Subjects"; ObjectID = "xfA-Av-3T3"; */
+"xfA-Av-3T3.title" = "Предметы";
+
+/* Class = "IBUINavigationItem"; title = "Subjects"; ObjectID = "ye7-GW-L9l"; */
+"ye7-GW-L9l.title" = "Предметы";

@@ -10,6 +10,7 @@
 #import "AppHelper.h"
 #import "DayRecord.h"
 #import "NSDate+Utils.h"
+#import "NSString+Utils.h"
 
 
 @interface InterfaceController()
@@ -91,7 +92,7 @@
 	[self.timeGroup setHidden:YES];
 	
 	[self.titleLabel setHidden:NO];
-	[self.titleLabel setText:NSLocalizedString(@"Free day", nil)];
+	[self.titleLabel setText:[@"Free day" loc]];
 	
 	[self.locationLabel setHidden:YES];
 	
