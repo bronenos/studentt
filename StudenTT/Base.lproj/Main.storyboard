@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6221" systemVersion="14C68k" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="tB1-Xe-pmZ">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6221" systemVersion="14C78c" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="tB1-Xe-pmZ">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6213"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
@@ -47,13 +47,13 @@
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Subject, Location" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="3HU-rR-KII">
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="StartTime – EndTime" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="gFI-2V-r92">
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="11"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
@@ -87,7 +87,7 @@
                                 </connections>
                             </tableView>
                         </subviews>
-                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <color key="backgroundColor" red="0.93725490196078431" green="0.93725490196078431" blue="0.95686274509803926" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="Lf4-tj-Rra" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="40" id="7xi-Yo-Z5W"/>
                             <constraint firstAttribute="centerX" secondItem="cye-Cw-brG" secondAttribute="centerX" id="NT6-oi-gwZ"/>
@@ -231,7 +231,7 @@
                             </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" translatesAutoresizingMaskIntoConstraints="NO" id="qWX-p2-Y81">
                                 <rect key="frame" x="0.0" y="307" width="480" height="173"/>
-                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <color key="backgroundColor" red="0.93725490196078431" green="0.93725490196078431" blue="0.95686274509803926" alpha="1" colorSpace="calibratedRGB"/>
                                 <prototypes>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="none" accessoryType="checkmark" indentationWidth="10" reuseIdentifier="SubjectCell" textLabel="qaB-Xu-431" detailTextLabel="2eW-nH-Wqd" style="IBUITableViewCellStyleSubtitle" id="w6f-gE-gBY" customClass="SubjectCell">
                                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -242,13 +242,13 @@
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Subject" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="qaB-Xu-431">
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Location, Teacher" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="2eW-nH-Wqd">
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="11"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
@@ -263,7 +263,7 @@
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Add subject" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="dRT-Ju-3ch">
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
@@ -279,16 +279,16 @@
                                 </connections>
                             </tableView>
                         </subviews>
-                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <color key="backgroundColor" red="0.93725490196078431" green="0.93725490196078431" blue="0.95686274509803926" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
+                            <constraint firstItem="H5f-5M-Iqv" firstAttribute="top" secondItem="uOg-h5-rw3" secondAttribute="bottom" constant="150" id="0iC-wD-YD6"/>
                             <constraint firstItem="qWX-p2-Y81" firstAttribute="leading" secondItem="H5f-5M-Iqv" secondAttribute="trailing" constant="8" id="2fg-6H-H35"/>
                             <constraint firstItem="RvX-Wi-1nk" firstAttribute="leading" secondItem="qWX-p2-Y81" secondAttribute="trailing" constant="8" id="CH6-pm-IXH"/>
                             <constraint firstItem="H5f-5M-Iqv" firstAttribute="width" secondItem="deF-vr-ASh" secondAttribute="width" multiplier="0.45" id="DA8-PE-6cg"/>
                             <constraint firstItem="qWX-p2-Y81" firstAttribute="leading" secondItem="deF-vr-ASh" secondAttribute="leading" id="EZV-r0-nmD"/>
                             <constraint firstItem="RvX-Wi-1nk" firstAttribute="width" secondItem="H5f-5M-Iqv" secondAttribute="width" id="HQj-Tj-SGJ"/>
                             <constraint firstItem="RvX-Wi-1nk" firstAttribute="height" secondItem="H5f-5M-Iqv" secondAttribute="height" id="Iof-ja-Ye8"/>
-                            <constraint firstItem="qWX-p2-Y81" firstAttribute="top" secondItem="H5f-5M-Iqv" secondAttribute="top" constant="-46" id="OpI-Ze-eba"/>
-                            <constraint firstItem="qWX-p2-Y81" firstAttribute="bottom" secondItem="H5f-5M-Iqv" secondAttribute="bottom" id="T7W-Tw-5pb"/>
+                            <constraint firstItem="qWX-p2-Y81" firstAttribute="top" secondItem="uOg-h5-rw3" secondAttribute="bottom" id="Vmk-32-hQD"/>
                             <constraint firstItem="RvX-Wi-1nk" firstAttribute="top" secondItem="H5f-5M-Iqv" secondAttribute="top" id="W8B-ex-cJ1"/>
                             <constraint firstItem="z8L-06-sk7" firstAttribute="height" secondItem="jVE-xp-rDZ" secondAttribute="height" id="WHs-uX-QF9"/>
                             <constraint firstItem="xbO-di-8gJ" firstAttribute="top" secondItem="qWX-p2-Y81" secondAttribute="bottom" id="WoT-2A-ljj"/>
@@ -304,41 +304,39 @@
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
+                                <exclude reference="0iC-wD-YD6"/>
                                 <exclude reference="ZQA-yl-rGA"/>
-                                <exclude reference="2fg-6H-H35"/>
-                                <exclude reference="OpI-Ze-eba"/>
-                                <exclude reference="T7W-Tw-5pb"/>
                                 <exclude reference="CH6-pm-IXH"/>
+                                <exclude reference="2fg-6H-H35"/>
+                                <exclude reference="Vmk-32-hQD"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=compact">
                             <mask key="constraints">
+                                <exclude reference="0iC-wD-YD6"/>
                                 <exclude reference="DA8-PE-6cg"/>
                                 <include reference="ZQA-yl-rGA"/>
                                 <exclude reference="zQv-e2-JHr"/>
+                                <include reference="CH6-pm-IXH"/>
                                 <include reference="2fg-6H-H35"/>
                                 <exclude reference="EZV-r0-nmD"/>
-                                <include reference="OpI-Ze-eba"/>
-                                <include reference="T7W-Tw-5pb"/>
+                                <include reference="Vmk-32-hQD"/>
                                 <exclude reference="pFD-ie-fpz"/>
                                 <exclude reference="xEC-wy-ycm"/>
-                                <include reference="CH6-pm-IXH"/>
-                                <exclude reference="WoT-2A-ljj"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=regular">
                             <mask key="constraints">
+                                <include reference="0iC-wD-YD6"/>
                                 <exclude reference="DA8-PE-6cg"/>
-                                <include reference="ZQA-yl-rGA"/>
+                                <exclude reference="ZQA-yl-rGA"/>
                                 <exclude reference="zQv-e2-JHr"/>
+                                <include reference="CH6-pm-IXH"/>
                                 <include reference="2fg-6H-H35"/>
                                 <exclude reference="EZV-r0-nmD"/>
-                                <include reference="OpI-Ze-eba"/>
-                                <include reference="T7W-Tw-5pb"/>
+                                <include reference="Vmk-32-hQD"/>
                                 <exclude reference="pFD-ie-fpz"/>
                                 <exclude reference="xEC-wy-ycm"/>
-                                <include reference="CH6-pm-IXH"/>
-                                <exclude reference="WoT-2A-ljj"/>
                             </mask>
                         </variation>
                     </view>
@@ -359,7 +357,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Hsa-uA-rCZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1653" y="327"/>
+            <point key="canvasLocation" x="1773" y="327"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="0bt-fI-Mnt">
@@ -405,13 +403,13 @@
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="jQd-IZ-m14">
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Location, Teacher" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="jV4-F6-Nlk">
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="11"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
@@ -448,14 +446,14 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3xu-fA-PBl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1185" y="969"/>
+            <point key="canvasLocation" x="1185" y="1269"/>
         </scene>
         <!--Lesson-->
         <scene sceneID="4ZG-6O-e8l">
             <objects>
                 <tableViewController id="QSO-jU-MPQ" customClass="EditSubjectViewController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" keyboardDismissMode="interactive" dataMode="static" style="grouped" separatorStyle="default" allowsSelection="NO" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="6FS-GM-4gK">
-                        <rect key="frame" x="0.0" y="0.0" width="480" height="480"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.93725490196078431" green="0.93725490196078431" blue="0.95686274509803926" alpha="1" colorSpace="calibratedRGB"/>
                         <sections>
@@ -473,11 +471,11 @@
                                                         <constraint firstAttribute="width" constant="90" id="Zy1-U9-Pqx"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Economics" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="79A-sa-Nfu" userLabel="Text Field">
-                                                    <rect key="frame" x="120" y="0.0" width="345" height="43"/>
+                                                    <rect key="frame" x="120" y="0.0" width="185" height="43"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits"/>
                                                 </textField>
@@ -505,11 +503,11 @@
                                                         <constraint firstAttribute="width" constant="90" id="nT6-Z5-SDX"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="120 room" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2jc-lq-Awq" userLabel="Text Field">
-                                                    <rect key="frame" x="120" y="0.0" width="345" height="43"/>
+                                                    <rect key="frame" x="120" y="0.0" width="185" height="43"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits"/>
                                                 </textField>
@@ -537,11 +535,11 @@
                                                         <constraint firstAttribute="width" constant="90" id="ypa-KD-6T4"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Paul Jones" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pf6-eQ-MdF" userLabel="Text Field">
-                                                    <rect key="frame" x="120" y="0.0" width="345" height="43"/>
+                                                    <rect key="frame" x="120" y="0.0" width="185" height="43"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits"/>
                                                 </textField>
@@ -585,11 +583,11 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XCu-aH-3ug" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1653" y="969"/>
+            <point key="canvasLocation" x="1773" y="1269"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="oJ7-lr-6JO"/>
         <segue reference="a4q-yF-CXQ"/>
+        <segue reference="iND-yX-lg3"/>
     </inferredMetricsTieBreakers>
 </document>

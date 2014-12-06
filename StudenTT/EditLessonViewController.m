@@ -83,6 +83,7 @@ static NSString * const kAddSubjectCellReuseID	= @"AddSubjectCell";
 	
 	self.startTimePicker.superview.frame = CGRectIntegral(self.startTimePicker.superview.frame);
 	self.endTimePicker.superview.frame = CGRectIntegral(self.endTimePicker.superview.frame);
+	self.subjectTableView.contentInset = UIEdgeInsetsMake(CGRectGetMinY(self.endTimePicker.superview.frame) - 120, 0, 0, 0);
 }
 
 
