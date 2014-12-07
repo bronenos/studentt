@@ -4,7 +4,7 @@
       "extent" : "full-screen",
       "idiom" : "watch",
       "subtype" : "38mm",
-      "filename" : "BigWatchIcon.png",
+      "filename" : "default-38.png",
       "minimum-system-version" : "8.0",
       "orientation" : "portrait",
       "scale" : "2x"
@@ -13,7 +13,7 @@
       "extent" : "full-screen",
       "idiom" : "watch",
       "subtype" : "42mm",
-      "filename" : "BigWatchIcon-1.png",
+      "filename" : "default-42.png",
       "minimum-system-version" : "8.0",
       "orientation" : "portrait",
       "scale" : "2x"

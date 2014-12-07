@@ -33,12 +33,10 @@
 		D477905F1A1F7575009BE95D /* WatchKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D477905E1A1F7575009BE95D /* WatchKit.framework */; };
 		D47790651A1F7575009BE95D /* InterfaceController.m in Sources */ = {isa = PBXBuildFile; fileRef = D47790641A1F7575009BE95D /* InterfaceController.m */; };
 		D47790681A1F7575009BE95D /* GlanceController.m in Sources */ = {isa = PBXBuildFile; fileRef = D47790671A1F7575009BE95D /* GlanceController.m */; };
-		D477906A1A1F7575009BE95D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D47790691A1F7575009BE95D /* Images.xcassets */; };
 		D477906E1A1F7575009BE95D /* StudenTT Watch App.app in Resources */ = {isa = PBXBuildFile; fileRef = D477906D1A1F7575009BE95D /* StudenTT Watch App.app */; };
 		D47790751A1F7575009BE95D /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D47790741A1F7575009BE95D /* Interface.storyboard */; };
 		D47790771A1F7575009BE95D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D47790761A1F7575009BE95D /* Images.xcassets */; };
 		D477907A1A1F7575009BE95D /* StudenTT WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = D477905D1A1F7575009BE95D /* StudenTT WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		D47790851A1FA217009BE95D /* LittleWatchIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = D47790841A1FA217009BE95D /* LittleWatchIcon.png */; };
 		D479207F1A1D071500187814 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D479207E1A1D071500187814 /* main.m */; };
 		D47920821A1D071500187814 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D47920811A1D071500187814 /* AppDelegate.m */; };
 		D47920851A1D071500187814 /* LessonsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D47920841A1D071500187814 /* LessonsViewController.m */; };
@@ -162,12 +160,10 @@
 		D47790641A1F7575009BE95D /* InterfaceController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InterfaceController.m; sourceTree = "<group>"; };
 		D47790661A1F7575009BE95D /* GlanceController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GlanceController.h; sourceTree = "<group>"; };
 		D47790671A1F7575009BE95D /* GlanceController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GlanceController.m; sourceTree = "<group>"; };
-		D47790691A1F7575009BE95D /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		D477906D1A1F7575009BE95D /* StudenTT Watch App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "StudenTT Watch App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D47790731A1F7575009BE95D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D47790741A1F7575009BE95D /* Interface.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Interface.storyboard; sourceTree = "<group>"; };
 		D47790761A1F7575009BE95D /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		D47790841A1FA217009BE95D /* LittleWatchIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = LittleWatchIcon.png; sourceTree = SOURCE_ROOT; };
 		D47790941A1FB061009BE95D /* libPods.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libPods.a; path = "Pods/build/Debug-iphoneos/libPods.a"; sourceTree = "<group>"; };
 		D47920791A1D071500187814 /* StudenTT.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StudenTT.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D479207D1A1D071500187814 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -340,7 +336,6 @@
 				D47790641A1F7575009BE95D /* InterfaceController.m */,
 				D47790661A1F7575009BE95D /* GlanceController.h */,
 				D47790671A1F7575009BE95D /* GlanceController.m */,
-				D47790691A1F7575009BE95D /* Images.xcassets */,
 				D47790611A1F7575009BE95D /* Supporting Files */,
 			);
 			path = "StudenTT WatchKit Extension";
@@ -357,7 +352,6 @@
 		D47790711A1F7575009BE95D /* StudenTT Watch App */ = {
 			isa = PBXGroup;
 			children = (
-				D47790841A1FA217009BE95D /* LittleWatchIcon.png */,
 				D47790741A1F7575009BE95D /* Interface.storyboard */,
 				D47790761A1F7575009BE95D /* Images.xcassets */,
 				D47790721A1F7575009BE95D /* Supporting Files */,
@@ -621,6 +615,7 @@
 					};
 					D477906C1A1F7575009BE95D = {
 						CreatedOnToolsVersion = 6.2;
+						DevelopmentTeam = V8NCXSZ3T7;
 					};
 					D47920781A1D071500187814 = {
 						CreatedOnToolsVersion = 6.2;
@@ -679,7 +674,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				D477906E1A1F7575009BE95D /* StudenTT Watch App.app in Resources */,
-				D477906A1A1F7575009BE95D /* Images.xcassets in Resources */,
 				D46FF7FC1A32133C001886BB /* Common.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -688,7 +682,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D47790851A1FA217009BE95D /* LittleWatchIcon.png in Resources */,
 				D47790751A1F7575009BE95D /* Interface.storyboard in Resources */,
 				D47790771A1F7575009BE95D /* Images.xcassets in Resources */,
 				D46FF7FD1A32133D001886BB /* Common.strings in Resources */,
@@ -964,6 +957,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 51A7DE65A72B77B7151A33ED /* Pods.debug.xcconfig */;
 			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
@@ -990,6 +984,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 86083C7E0C2821009C5EFCC4 /* Pods.release.xcconfig */;
 			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
@@ -1021,10 +1016,7 @@
 				);
 				INFOPLIST_FILE = "StudenTT WatchKit Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/Pods/build/Debug-iphoneos",
-				);
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				PRODUCT_NAME = "${TARGET_NAME}";
 				PROVISIONING_PROFILE = "";
 				SKIP_INSTALL = YES;
@@ -1040,10 +1032,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "StudenTT WatchKit Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/Pods/build/Debug-iphoneos",
-				);
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				PRODUCT_NAME = "${TARGET_NAME}";
 				PROVISIONING_PROFILE = "";
 				SKIP_INSTALL = YES;
@@ -1055,6 +1044,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
@@ -1073,6 +1063,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				IBSC_MODULE = StudenTT_WatchKit_Extension;
 				INFOPLIST_FILE = "StudenTT Watch App/Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
