@@ -1,23 +1,6 @@
 {
   "images" : [
-    {
-      "extent" : "full-screen",
-      "idiom" : "watch",
-      "subtype" : "38mm",
-      "filename" : "default-38.png",
-      "minimum-system-version" : "8.0",
-      "orientation" : "portrait",
-      "scale" : "2x"
-    },
-    {
-      "extent" : "full-screen",
-      "idiom" : "watch",
-      "subtype" : "42mm",
-      "filename" : "default-42.png",
-      "minimum-system-version" : "8.0",
-      "orientation" : "portrait",
-      "scale" : "2x"
-    }
+
   ],
   "info" : {
     "version" : 1,
