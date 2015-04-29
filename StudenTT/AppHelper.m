@@ -104,11 +104,14 @@ static NSString * const kApplicationGroupID	= @"group.me.bronenos.studentt";
 
 + (DayRecord *)getDayRecord
 {
-	day_config_t dc = [AppHelper todayConfig];
+	RLMRealm *realm = [AppHelper sharedRealm];
 	
-	RLMResults *dayResults = [DayRecord objectsInRealm:[AppHelper sharedRealm]
-												 where:@"weekday == %d AND oddWeek == %d",
-							  dc.weekday, dc.is_odd];
+	ConfigRecord *configRecord = [[ConfigRecord allObjectsInRealm:realm] firstObject];
+	
+	day_config_t dc = [AppHelper todayConfig];
+	dc.is_odd = dc.is_odd || configRecord.commonMode;
+	
+	RLMResults *dayResults = [DayRecord objectsInRealm:realm where:@"weekday == %d AND oddWeek == %d", dc.weekday, dc.is_odd];
 	return [dayResults firstObject];
 }
 @end
